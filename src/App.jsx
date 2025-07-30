@@ -73,7 +73,7 @@ function App() {
 
   return (
     <div className='maincontainer' ref={containerRef}>
-      {/* <div ref={lightRef} className="cursor-light"style={{ display: loading ? "none" : "block" }}/> */}
+      <div ref={lightRef} className="cursor-light"style={{ display: loading ? "none" : "block" }}/>
     {
       loading? <Loader/>
       :
