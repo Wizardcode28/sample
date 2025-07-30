@@ -2,7 +2,6 @@ import React from 'react'
 import "./hero.css"
 import { useRef,useEffect,useState } from 'react'
 import { motion } from "framer-motion"
-import version from "../../assets/version.png"
 import Typed from 'typed.js'
 
 const rightcontainervariants={
@@ -95,7 +94,7 @@ const Hero = () => {
       
         <div className="content">
         <motion.div className='left' variants={leftvariants} initial="initial" animate="animate">
-          <motion.img src={version} className="version" whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }} animate={{x:[20,0],opacity:[0,1]}} alt="" />
+          <motion.img src="/Images/version.png" className="version" whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }} animate={{x:[20,0],opacity:[0,1]}} alt="" />
           <div className="timeline">
             <div className="date">
               <img src="./Images/calendar.png" alt="" />

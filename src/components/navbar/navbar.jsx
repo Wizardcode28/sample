@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import "./navbar.css";
-import logo from "../../assets/newlogo.png";
 import { motion } from "framer-motion";
 
 const imgvariants = {
@@ -40,14 +39,14 @@ const Navbar = () => {
       <div className="navcontent">
         {/* Logo for desktop view */}
         <div className="desktop-logo">
-          <motion.img src={logo} variants={imgvariants} initial="initial" animate="animate" className='istelogo' alt="logo" />
+          <motion.img src="/Images/newlogo.png" variants={imgvariants} initial="initial" animate="animate" className='istelogo' alt="logo" />
         </div>
 
         {/* The navigation menu for mobile and desktop */}
         <motion.div className={`nav ${menuOpen ? "active" : ""}`}>
            {/* Logo for mobile view */}
            <div className="mobile-logo">
-              <img src={logo} className='istelogo' alt="logo" />
+              <img src="/Images/newlogo.png" className='istelogo' alt="logo" />
             </div>
           <motion.ul variants={ulvariants} initial="initial" animate="animate">
             <motion.li variants={livariants}><a href="#hero">HOME</a></motion.li>

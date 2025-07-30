@@ -1,6 +1,6 @@
 .herocontainer {
     background-color: #020f1f;
-    background-image: url("../../assets/hllo3.png");
+    background-image: url("/Images/hllo3.png");
     /* linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
     background-color: rgba(0, 0, 0, 0.4);
     background-repeat: no-repeat;
