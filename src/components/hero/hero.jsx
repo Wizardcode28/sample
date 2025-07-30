@@ -94,7 +94,8 @@ const Hero = () => {
       
         <div className="content">
         <motion.div className='left' variants={leftvariants} initial="initial" animate="animate">
-          <motion.img src="/Images/version.png" className="version" whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }} animate={{x:[20,0],opacity:[0,1]}} alt="" />
+          {/* <motion.img src="/Images/version.png" className="version" whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }} animate={{x:[20,0],opacity:[0.5,1]}} alt="" /> */}
+          <motion.img src="/Images/version.png" className="version" whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }} alt="" />
           <div className="timeline">
             <div className="date">
               <img src="./Images/calendar.png" alt="" />
@@ -105,10 +106,7 @@ const Hero = () => {
               <div>MANIT,Bhopal</div>
             </div>   
           </div>
-          {/* <div className='name'>
-            <div className='upper'>Version Beta</div>
-            <div className='lower'>8.0</div>
-          </div> */}
+
         </motion.div>
         <motion.div className="right" variants={rightcontainervariants} initial="initial" animate="animate" exit={{opacity:0}}>
           <motion.div className='title' variants={childvariants} ref={el}></motion.div>
