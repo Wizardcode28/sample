@@ -23,7 +23,7 @@ export default function Footer() {
     <Box
       component="footer"
       sx={{
-        backgroundColor: '#0f172a',
+        backgroundColor: '#09314a',
         color: 'white',
         py: 2,
         px: 3
@@ -41,7 +41,7 @@ export default function Footer() {
           }}
         >
           
-          <Grid item xs={12} lg={4} sx={{width: '100%'}}>
+          {/* <Grid item xs={12} lg={4} sx={{width: '100%'}}>
             <Box sx={{ textAlign: { xs: 'center', lg: 'left' }, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
               <Stack 
                 direction="row" 
@@ -80,7 +80,7 @@ export default function Footer() {
                 BEST STUDENT'S CHAPTER IN MADHYA PRADESH-CHHATTISGARH REGION FROM 3 CONSECUTIVE YEARS
               </Typography>
             </Box>
-          </Grid>
+          </Grid> */}
 
           <Grid item xs={12} lg={8} sx={{width: '100%'}} >
             <Box 
@@ -200,7 +200,7 @@ export default function Footer() {
                 }}
               />
 
-              <Box sx={{ textAlign: 'left' }}>
+              <Box sx={{ textAlign: 'left', }}>
                 <Typography
                   variant="h6"
                   sx={{
@@ -208,7 +208,7 @@ export default function Footer() {
                     color: '#ea580c',
                     fontWeight: 600,
                     textAlign: { xs: 'center', md: 'left' },
-                    fontSize: { xs: 28, md: 42 },
+                    fontSize: { xs: 28, md: 40 },
                     transition: 'transform 0.3s ease',
                     '&:hover': {
                       transform: 'scale(1.1)'
@@ -404,7 +404,7 @@ export default function Footer() {
         }}
       />
 
-      <Container sx={{ display: 'flex',flexDirection: 'row',flexWrap: 'wrap',justifyContent: 'center',alignItems: 'center',gap: {xs:'2rem', md: '20rem'} ,marginTop: '1.5rem',textAlign: 'center'}}>
+      <Container sx={{ display: 'flex',flexDirection: 'row',flexWrap: 'wrap',justifyContent: 'center',alignItems: 'center',gap: {xs:'2rem', md: '20rem'} ,marginTop: '1rem',textAlign: 'center'}}>
         <Link sx={{textDecoration: 'none',cursor: 'pointer', color: '#b5b5b6', fontSize: { xs: '16px', sm: '18px', md: '20px' }, fontFamily: 'Roboto', fontWeight: '600', whiteSpace: 'nowrap'}}> Code Of Conduct Devfolio </Link>
         <Link sx={{textDecoration: 'none',cursor: 'pointer', color: '#b5b5b6', fontSize: { xs: '16px', sm: '18px', md: '20px' }, fontFamily: 'Roboto', fontWeight: '600', whiteSpace: 'nowrap'}}> Rulebook </Link>
       </Container>
@@ -415,7 +415,7 @@ export default function Footer() {
           maxWidth: '960px',
           height: '1px',
           margin: '0 auto',
-          marginTop: '2rem',
+          marginTop: '1rem',
           backgroundColor: '#7a7a7a',
           display: { xs: 'flex', lg: 'flex', md: 'flex' }
         }}
