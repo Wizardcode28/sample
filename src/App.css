@@ -26,8 +26,8 @@
 body{
   background-color: rgb(2, 15, 31);
 }
-@media screen and (max-width:512px){
+/* @media screen and (max-width:512px){
   .cursor-light{
     display: none;
   }
-}
+} */

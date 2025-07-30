@@ -340,24 +340,29 @@
     }
 
     .herocontainer {
-        background-image: url("/Images/heroverticalcut2.png");
-        /* background-image: url('');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center; */
-        /* background-repeat: repeat-y; */
-
-        /* background-attachment:unset; */
+        background-image: url("/Images/heroverticalcut2_cleanup.png");
         min-height: 100vh;
     }
 
     .desc {
         width: 100%;
+        margin-bottom: 50px;
     }
 
     .title {
         height: 15vh;
         font-size: 40px;
+        margin-bottom: 20px;
+    }
+    .timeline {
+        margin-bottom: 70px;
+    }
+    
+    .btn {
+        margin-bottom: 50px;
+    }
+    .lowercontent {
+        margin-bottom: 100px;
     }
 }
 
@@ -368,27 +373,19 @@
 
     .countdown {
         gap: 7px;
-    }
+    } 
 }
 
 @media screen and (max-width:512px) {
     .herocontainer {
         background-color: #020f1f;
-        background-color: rgba(0, 0, 0, 0);
+        background-color: rgba(155, 139, 139, 0);
+        background-color: rgba(0, 0, 0, 0.6);
         background-blend-mode: overlay;
     }
 
     .timeline {
         flex-direction: column;
-        margin-bottom: 70px;
-    }
-
-    .desc {
-        margin-bottom: 50px;
-    }
-
-    .btn {
-        margin-bottom: 50px;
     }
 
     .countdown .time {
@@ -403,7 +400,4 @@
         font-size: 22px;
     }
 
-    .lowercontent {
-        margin-bottom: 100px;
-    }
 }
