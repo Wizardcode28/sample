@@ -1,3 +1,10 @@
+/* --- Basic Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html.body-no-scroll,
 body.body-no-scroll {
     overflow: hidden;
@@ -6,6 +13,8 @@ body.body-no-scroll {
 html,body{
     scroll-behavior: smooth;
 }
+
+/* --- Main Navbar Container --- */
 .navcontainer {
     font-family: "StateWide", sans-serif;
     width: 100%;
@@ -14,46 +23,45 @@ html,body{
     align-items: center;
     z-index: 10;
     position: fixed;
-    overflow-x: hidden;
     top: 0;
     left: 0;
+    padding: 10px 0;
 }
 
 .navcontent {
-    margin-top: 20px;
     width: 80%;
     height: 60px;
-    background-color: rgba(103, 130, 246, 0.29);
-    border-radius: 25px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(3px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    padding: 0 20px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
 }
 
 .istelogo {
     width: 100px;
 }
 
-.nav ul {
+/* --- Desktop Navigation --- */
+.desktop-nav ul {
     display: flex;
     gap: 25px;
-}
-.nav ul li{
     list-style: none;
 }
-.nav ul li a{
+.desktop-nav ul li a {
     color: #FFFFFF;
     font-weight: bold;
     cursor: pointer;
     font-family: "Tektur", sans-serif;
     font-size: 20px;
+    text-decoration: none;
 }
 
+/* --- Hamburger and Close Icons --- */
 .hamburger {
     display: none;
     cursor: pointer;
@@ -64,14 +72,77 @@ html,body{
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
     background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.close-icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 45px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* --- Mobile Navigation Menu (Slide-in) --- */
+.nav {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 70%;
+    height: 100vh;
+    background-color: rgb(25, 25, 25); /* Reverted to solid background */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 120px 40px;
+    transition: left 0.4s ease-in-out;
+    z-index: 11; /* Ensure menu is on top of the blur overlay */
+}
+
+.nav.active {
+    left: 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.nav ul li a {
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "Tektur", sans-serif;
+    font-size: 24px;
+    text-decoration: none;
 }
 
 .mobile-logo {
-    display: none;
+    display: block;
+    margin-bottom: 50px;
 }
+
+/* --- New Blur Background Overlay --- */
+.blur-background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Optional: slight dark tint */
+    backdrop-filter: blur(5px);
+    z-index: 10; /* Sits behind the nav bar but on top of page content */
+}
+
+
+/* --- Media Queries for Responsiveness --- */
 
 @media screen and (max-width: 1168px) {
     .navcontent {
@@ -80,81 +151,26 @@ html,body{
 }
 
 @media screen and (max-width: 992px) {
-    .navcontent {
-        width: 98%;
+    .desktop-nav {
+        display: none;
     }
-    .nav ul li {
-        font-size: 15px;
-    }
-}
-
-@media screen and (max-width: 898px) {
-    .navcontent {
-        justify-content: space-between;
-        padding: 0px 30px;
-        width: 88%;
-    }
-
-    .nav {
-        position: fixed;
-        left: -150%;
-        top: 0;
-        gap: 0;
-        flex-direction: column;
-        background-color: rgba(25, 25, 25, 0.95);
-        width: 100%;
-        height: 100vh;
-        text-align: center;
-        transition: 0.3s;
-        justify-content: center;
-    }
-
-    .nav.active {
-        position: absolute;
-        left: -50px;
-        top: -25px;
-    }
-
-    .nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    .mobile-logo .istelogo{
-        margin-top: 20px;
-        margin-left: 40px;
-    }
-    .nav ul li {
-        margin: 16px 0;
-        font-size: 20px;
-    }
-
     .hamburger {
         display: block;
-        z-index: 11;
     }
-
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .mobile-logo {
-        display: block;
-        margin-bottom: 30px;
-        margin-top: 20px;
+    .navcontent {
+        width: 90%;
     }
 }
 
 @media screen and (max-width: 512px) {
     .navcontent {
         height: 50px;
+        width: 90%;
     }
     .istelogo {
         width: 90px;
+    }
+    .nav {
+        padding: 100px 30px;
     }
 }
