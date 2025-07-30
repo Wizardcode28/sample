@@ -42,14 +42,14 @@ const Navbar = () => {
 
           {/* Desktop Menu (hidden on mobile) */}
           <div className="desktop-nav">
-            <ul>
-              <li><a href="#hero">HOME</a></li>
-              <li><a href="#about">ABOUT</a></li>
-              <li><a href="#schedule">SCHEDULE</a></li>
-              <li><a href="#prizecontainer">PRIZES</a></li>
-              <li><a href="#gallery">GALLERY</a></li>
-              <li><a href="#sponsors">SPONSORS</a></li>
-              <li><a href="#faqs">FAQS</a></li>
+            <ul variants={ulvariants} initial="initial" animate="animate" >
+              <li variants={livariants}><a href="#hero">HOME</a></li>
+              <li variants={livariants}><a href="#about">ABOUT</a></li>
+              <li variants={livariants}><a href="#schedule">SCHEDULE</a></li>
+              <li variants={livariants}><a href="#prizecontainer">PRIZES</a></li>
+              <li variants={livariants}><a href="#gallery">GALLERY</a></li>
+              <li variants={livariants}><a href="#sponsors">SPONSORS</a></li>
+              <li variants={livariants}><a href="#faqs">FAQS</a></li>
             </ul>
           </div>
 
@@ -70,14 +70,14 @@ const Navbar = () => {
         <div className="mobile-logo">
             <img src="/Images/newlogo.png" className='istelogo' alt="logo" />
         </div>
-        <motion.ul variants={ulvariants} initial="initial" animate="animate">
-          <motion.li variants={livariants}><a href="#hero" onClick={() => setMenuOpen(false)}>HOME</a></motion.li>
-          <motion.li variants={livariants}><a href="#about" onClick={() => setMenuOpen(false)}>ABOUT</a></motion.li>
-          <motion.li variants={livariants}><a href="#schedule" onClick={() => setMenuOpen(false)}>SCHEDULE</a></motion.li>
-          <motion.li variants={livariants}><a href="#prizecontainer" onClick={() => setMenuOpen(false)}>PRIZES</a></motion.li>
-          <motion.li variants={livariants}><a href="#gallery" onClick={() => setMenuOpen(false)}>GALLERY</a></motion.li>
-          <motion.li variants={livariants}><a href="#sponsors" onClick={() => setMenuOpen(false)}>SPONSORS</a></motion.li>
-          <motion.li variants={livariants}><a href="#faqs" onClick={() => setMenuOpen(false)}>FAQS</a></motion.li>
+        <motion.ul>
+          <motion.li ><a href="#hero" onClick={() => setMenuOpen(false)}>HOME</a></motion.li>
+          <motion.li ><a href="#about" onClick={() => setMenuOpen(false)}>ABOUT</a></motion.li>
+          <motion.li ><a href="#schedule" onClick={() => setMenuOpen(false)}>SCHEDULE</a></motion.li>
+          <motion.li ><a href="#prizecontainer" onClick={() => setMenuOpen(false)}>PRIZES</a></motion.li>
+          <motion.li ><a href="#gallery" onClick={() => setMenuOpen(false)}>GALLERY</a></motion.li>
+          <motion.li ><a href="#sponsors" onClick={() => setMenuOpen(false)}>SPONSORS</a></motion.li>
+          <motion.li ><a href="#faqs" onClick={() => setMenuOpen(false)}>FAQS</a></motion.li>
         </motion.ul>
       </motion.div>
       

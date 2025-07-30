@@ -15,7 +15,7 @@ html,body{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
+    z-index: 15;
     position: fixed;
     top: 0;
     left: 0;
@@ -99,6 +99,7 @@ html,body{
 
 .nav.active {
     left: 0;
+    z-index: 20;
 }
 
 .nav ul {
