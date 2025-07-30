@@ -14,12 +14,19 @@ import Footer from './components/footer/footer'
 import Loader from "./components/loader/Loader.jsx"
 function App() {
   const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = "public/Images/hllo3.png";
+  }, []);
+  
   useEffect(()=>{
     const timer= setTimeout(()=>{
       setLoading(false)
     },5000)
   return ()=>clearTimeout(timer)
 },[])
+
 
   const lightRef = useRef(null)
   const containerRef = useRef(null)
