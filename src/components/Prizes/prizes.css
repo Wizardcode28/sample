@@ -89,6 +89,17 @@ img{
     .prizes{
         flex-direction: column;
     }
+    .one{
+        order: 0;
+    }
+    .second{
+        order: 1;
+        transform: scale(1);
+    }
+    .third{
+        order: 2;
+        transform: scale(1);
+    }
     #prizecontainer{
         height: auto;
         min-height: 100vh;
