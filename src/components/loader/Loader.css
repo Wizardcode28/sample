@@ -17,6 +17,7 @@
   border-right: 2px solid aqua;
   width: 0;
   animation: typing 2.5s steps(30, end) forwards, blink 1.2s infinite;
+  text-align: center;
 }
 
 @keyframes typing {
@@ -26,4 +27,13 @@
 
 @keyframes blink {
   50% { border-color: transparent; }
+}
+
+@media screen and (max-width:552px){
+ .terminal-loader{
+  padding: 0px 15px;
+ }
+ .typewriter-text{
+  white-space: wrap;
+ }
 }

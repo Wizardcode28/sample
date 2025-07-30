@@ -340,7 +340,7 @@
     }
 
     .herocontainer {
-        background-image: url("https://version-beta.vercel.app/Images/heroverticalcut2.png");
+        background-image: url("/Images/heroverticalcut2.png");
         /* background-image: url('');
         background-size: cover;
         background-repeat: no-repeat;

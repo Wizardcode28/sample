@@ -15,15 +15,15 @@ import Loader from "./components/loader/Loader.jsx"
 function App() {
   const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-    const img = new Image();
-    img.src = "public/Images/hllo3.png";
-  }, []);
+  // useEffect(() => {
+  //   const img = new Image();
+  //   img.src = "public/Images/hllo3.png";
+  // }, []);
   
   useEffect(()=>{
     const timer= setTimeout(()=>{
       setLoading(false)
-    },5000)
+    },10000000)
   return ()=>clearTimeout(timer)
 },[])
 
