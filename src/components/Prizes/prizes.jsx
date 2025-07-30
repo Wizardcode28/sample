@@ -1,21 +1,22 @@
 import React from 'react'
-import { useState,useEffect,useRef} from 'react'
+import {useEffect,useRef} from 'react'
 import "./prizes.css"
+import confetti from 'canvas-confetti'
 
 const Prizes = () => {
-  const [hasRained,setHasRained]= useState(false)
   const prizeRef = useRef(null)
+  const hasRainedRef = useRef(false)
+
   useEffect(() => {
     // ensure confetti is available
     if (typeof confetti !== 'function') return
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting && !hasRained) {
-          setHasRained(true)
+        if (entry.isIntersecting && !hasRainedRef.current) {
+          hasRainedRef.current = true
           const rainDuration = 3000 // milliseconds
           const rainEnd = Date.now() + rainDuration;
-
           (function frame() {
             confetti({
               particleCount: 2,
@@ -36,9 +37,9 @@ const Prizes = () => {
     if (prizeRef.current) observer.observe(prizeRef.current)
 
     return () => {
-      if (prizeRef.current) observer.unobserve(prizeRef.current)
+      observer.disconnect()
     }
-  }, [hasRained])
+  }, [])
 
   return (
     <div id='prizecontainer' ref={prizeRef}>

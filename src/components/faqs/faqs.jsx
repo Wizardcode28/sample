@@ -5,12 +5,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Faqs = () => {
-  useEffect(() => {
-      AOS.init({
-        duration:6000,
-        once:true
-      })
-    },[])
   const [currIndex, setcurrIndex] = useState(-1)
   const handleClick=(index)=>{
     setcurrIndex(currIndex==index? -1 : index)
