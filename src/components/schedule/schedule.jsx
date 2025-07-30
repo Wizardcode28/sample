@@ -79,7 +79,7 @@ const Schedule = () => {
                   </div>
                   <div className="flex">
                     <img src="Images/50.png" width={"50px"} className='mr-3' alt="" />
-                    <h3 className="text-4xl font-[500] text-[#F68A8A] mb-1  max-md:scale-90 max-md:mb-0">
+                    <h3 className="text-4xl font-[500] text-[#F68A8A] mb-1  max-md:scale-90 max-md:mb-0 max-md:text-2xl">
                       Announcement
                     </h3>
                   </div>
