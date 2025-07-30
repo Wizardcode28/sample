@@ -1,6 +1,4 @@
 import { useState , useRef , useEffect} from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -12,9 +10,16 @@ import Prizes from './components/Prizes/prizes'
 import Gallery3 from './components/gallery/gallery'
 import Sponsors from './components/sponsors/sponsors'
 import Faqs from './components/faqs/faqs'
-import Footer from './components/footer/footer';
+import Footer from './components/footer/footer'
+import Loader from "./components/loader/Loader.jsx"
 function App() {
-  const [count, setCount] = useState(0)
+  const [loading, setLoading] = useState(true)
+  useEffect(()=>{
+    const timer= setTimeout(()=>{
+      setLoading(false)
+    },5000)
+  return ()=>clearTimeout(timer)
+},[])
 
   const lightRef = useRef(null)
   const containerRef = useRef(null)
@@ -27,20 +32,27 @@ function App() {
   },[])
 
   return (
-    <>
-      <div className='maincontainer' ref={containerRef}>
-        <div ref={lightRef} className="cursor-light" />
+    <div className='maincontainer' ref={containerRef}>
+    {
+      loading? <Loader/>
+      :
+      (  
+        <>
+        <div ref={lightRef} className="cursor-light"/>
         <Navbar/>
-        <Hero />
+        <Hero/>
         <About/>
+        <div className='transition-bridge'></div>
         <Schedule/>
         <Prizes/>
         <Gallery3/>
         <Sponsors/>
         <Faqs/>
         <Footer/>
-      </div>
-    </>
+        </>
+        )}
+    </div>
+
   )
 }
 
