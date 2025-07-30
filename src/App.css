@@ -25,5 +25,5 @@
 }
 body{
   background-color: rgb(2, 15, 31);
-  z-index: -40;
+  /* z-index: -40; */
 }
