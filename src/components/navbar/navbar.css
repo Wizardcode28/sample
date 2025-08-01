@@ -123,7 +123,9 @@ html,body{
     display: block;
     margin-bottom: 50px;
 }
-
+.mobile-logo .istelogo{
+    width: 150px;
+}
 /* --- New Blur Background Overlay --- */
 .blur-background-overlay {
     position: fixed;

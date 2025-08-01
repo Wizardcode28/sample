@@ -10,9 +10,9 @@ import Prizes from './components/Prizes/prizes'
 import Gallery3 from './components/gallery/gallery'
 import Sponsors from './components/sponsors/sponsors'
 import Faqs from './components/faqs/faqs'
-import Footer from './components/footer/footer'
+// import Footer from './components/footer/footer'
 import Loader from "./components/loader/Loader.jsx"
-// import Contact from "./components/contact/Contact.jsx"
+import Contact from "./components/contact/Contact.jsx"
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -20,7 +20,7 @@ function App() {
   useEffect(()=>{
     const timer= setTimeout(()=>{
       setLoading(false)
-    },1)
+    },5000)
   return ()=>clearTimeout(timer)
 },[])
 
@@ -90,8 +90,8 @@ function App() {
         <Gallery3/>
         <Sponsors/>
         <Faqs/>
-        <Footer/>
-        {/* <Contact/> */}
+        {/* <Footer/> */}
+        <Contact/>
         </>
         )}
     </div>

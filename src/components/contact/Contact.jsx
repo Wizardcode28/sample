@@ -44,8 +44,8 @@ const Contact = () => {
       <div className='other'>
         <hr />
         <div className='otherdiv'>
-          <div>Code of Conduct Devfolio</div>
-          <div>Rule Book</div>
+          <a href="https://devfolio.co/code-of-conduct" target="blank">Code of Conduct Devfolio</a>
+          <a href="/Images/VBrulebook-2024.pdf" target="blank">Rule Book</a>
         </div>
         <hr />
           <div>
