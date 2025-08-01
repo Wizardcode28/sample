@@ -12,6 +12,7 @@ import Sponsors from './components/sponsors/sponsors'
 import Faqs from './components/faqs/faqs'
 import Footer from './components/footer/footer'
 import Loader from "./components/loader/Loader.jsx"
+// import Contact from "./components/contact/Contact.jsx"
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -19,7 +20,7 @@ function App() {
   useEffect(()=>{
     const timer= setTimeout(()=>{
       setLoading(false)
-    },5000)
+    },1)
   return ()=>clearTimeout(timer)
 },[])
 
@@ -90,6 +91,7 @@ function App() {
         <Sponsors/>
         <Faqs/>
         <Footer/>
+        {/* <Contact/> */}
         </>
         )}
     </div>

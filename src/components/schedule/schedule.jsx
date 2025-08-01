@@ -4,7 +4,7 @@ const Schedule = () => {
   return (
       <>
       <div className="flex justify-center mt-14">
-        <div className='abouttitle text-6xl font-extrabold mb-5'>SCHEDULE</div>
+        <div className='abouttitle text-6xl font-extrabold mb-5'>Schedule</div>
       </div>
       <div className="container h-auto"id="schedule">
         <div className="row">

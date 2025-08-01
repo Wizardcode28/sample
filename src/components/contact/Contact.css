@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contactcontainer{
+    width: 100%;
+    height: max-content;
+    padding: 80px 20px;
+    text-align: center;
+    overflow: hidden;
+    /* background-color: #370812; */
+    background-color: #09314a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 30px; */
+}
+
+.contacts{
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    /* height: 40vh; */
+    margin-bottom: 10vh;
+}
+.contactcontainer img{
+    width: 30px;
+}
+.leftcontacts{
+    width: max-content;
+}
+
+.leftcontacts,
+.rightcontacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    width: 50%;
+    height: 100%;
+}
+.heading{
+    color: rgb(137 123 226);
+    color: 	#FF6F61;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Poppins";
+    margin-bottom: 20px;
+}
+.cdetailcont{
+    display: flex;
+    gap: 15px;
+    width:90%;
+    color: 	#E0DADC;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-family: 'Montserrat';
+    /* color: 	#A0888C; */
+}
+.cdetails{
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* width: ; */
+    /* align-items: center; */
+    gap: 10px;
+    font-size: 20px;
+}
+.cdetailcont a{
+    text-decoration: none;
+    color: #E0DADC;
+}
+.media{
+    width: max-content;
+}
+
+.other{
+    width: 70%;
+    color: #A0888C;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}	
+.otherdiv{
+    display: flex;
+    justify-content: space-around;
+}
+.istename a{
+    text-decoration: none;
+    color: #FF6F61;
+}
+/* media queries */
+@media screen and (max-width:1088px){
+    .contacts{
+        width: 100%;
+    }
+}
+@media screen and (max-width:900px){
+    .leftcontacts .cdetailcont{
+        width: 100%;
+    }
+}
+@media screen and (max-width:684px){
+    .contacts{
+        flex-direction: column;
+        margin-bottom: 15vh;
+        padding: 8%;
+    }
+    .leftcontacts,.rightcontacts{
+        width: 100%;
+        align-items: start;
+        /* height:40vh; */
+    }
+    .leftcontacts,.rightcontacts .heading{
+        margin-top: 40px;
+    }
+    .other{
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width:592px){
+    .leftcontacts .heading{
+        margin-top: 40px;
+    }
+    /* .rightcontacts .heading{
+        margin-top: 100px;
+    } */
+    .cdetailcont{
+        width: 100%;
+    }
+    .contactcontainer{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .contacts{
+        padding: 4%;
+        /* gap: 0px; */
+    } 
+}
