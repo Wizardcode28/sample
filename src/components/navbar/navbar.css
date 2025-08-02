@@ -80,21 +80,21 @@ html,body{
     cursor: pointer;
 }
 
-/* --- Mobile Navigation Menu (Slide-in) --- */
 .nav {
     position: fixed;
     left: -100%;
     top: 0;
     width: 70%;
     height: 100vh;
-    background-color: rgb(25, 25, 25); /* Reverted to solid background */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     padding: 120px 40px;
     transition: left 0.4s ease-in-out;
-    z-index: 11; /* Ensure menu is on top of the blur overlay */
+    z-index: 20; /* Ensure menu is on top of the blur overlay */
 }
 
 .nav.active {
