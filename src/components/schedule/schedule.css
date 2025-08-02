@@ -4,3 +4,17 @@
 #schedulecont{
     overflow: hidden;
 }
+@media (max-width: 500px) {
+    .sch_events {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sch_para {
+        font-size:0.8rem ;
+    }
+    .sch_events {
+        font-size: 1.2rem;
+    }
+}

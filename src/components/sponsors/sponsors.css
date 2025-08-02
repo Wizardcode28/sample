@@ -47,11 +47,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .sponsorstitle {
-    font-size: 1.8rem;
-    margin-bottom: 40px;
-  }
-
   .img {
     width: 140px;
   }
@@ -63,10 +58,6 @@
 
 
 @media screen and (max-width: 768px) {
-  .sponsorstitle {
-    font-size: 1.5rem;
-  }
-
   .img {
     width: 100px;
   }
@@ -80,9 +71,5 @@
 @media screen and (max-width: 480px) {
   .img {
     width: 70px;
-  }
-
-  .sponsorstitle {
-    font-size: 1.3rem;
   }
 }

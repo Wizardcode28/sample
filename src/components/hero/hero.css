@@ -19,7 +19,6 @@
     animation: bgZoom 15s infinite ease-in-out;
     /* padding: 46px; */
     /* margin-top: 60px; */
-
 }
 
 .herofade::after {
@@ -308,18 +307,21 @@
     }
 }
 
-/* @media screen and (max-width:1168px) {
+@media screen and (max-width:800px) {
     @keyframes bgZoom {
         0% {
-            background-size: 100%;
+            background-size: 115%;
         }
 
-        100% {
-            background-size: 100%;
+        50% {
+            background-size: 135%;
+        }
+        100%{
+            background-size: 115%;
         }
     }
 
-} */
+}
 
 @media screen and (max-width:800px) {
     .content {
@@ -339,12 +341,15 @@
     }
 
     .herocontainer {
-        background-image: url("/Images/hllo3.png");
+        /* background-image: url("/Images/hllo3.png"); */
         /* background-image: url("/Images/heroverticalcut2_cleanup.png"); */
         background-image: url("/Images/new_herovertical.png");
         min-height: 100vh;
         z-index: -1;
-        /* background-attachment:unset; */
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
+        animation: bgZoom 10s infinite ease-in-out;
     }
 
     .desc {
@@ -403,4 +408,19 @@
         font-size: 22px;
     }
 
+}
+@media screen and (max-width:400px) {
+    .countdown .time {
+        font-size: 20px;
+        width: 17vw;
+        /* box-shadow: 0 0 5px rgba(4, 240, 255, 0.2); */
+    }
+    .label{
+    gap: 5vw;
+    font-size: 15px;
+    }
+    .title{
+        height: 22vh;
+        /* margin-bottom: 35px; */
+    }
 }

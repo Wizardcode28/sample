@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px 0px;
+  padding: 10px 10px;
   /* padding-bottom: 10vh; */
 
 }
@@ -22,10 +22,10 @@
 }
 .swiper-slide {
   background: rgba(255, 255, 255, 0.03);
-  border-radius: 20px;
   backdrop-filter: blur(20px);
+  border-radius: 20px;
   padding: 7px;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 5px rgba(0, 255, 255, 0.1);
 }
 
 .mySwiper {

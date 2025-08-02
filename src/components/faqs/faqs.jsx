@@ -23,7 +23,7 @@ const Faqs = () => {
   
   return (
     <div className='faqscontainer' id="faqs">
-      <div className='faqstitle'>FAQ's</div>
+      <div className='abouttitle faqstitle'>FAQ's</div>
       <div className="faqs">
         <div className="faq">
             <div className="question" onClick={()=>{handleClick(0)}} data-aos="fade-right"  data-aos-delay="0" data-aos-offset="400">
