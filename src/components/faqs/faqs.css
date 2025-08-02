@@ -4,10 +4,10 @@
 }
 .faqscontainer{
     width: 100%;
-    height: max-content;
+    /* height: min(150vh,max-content); */
     padding: 80px 20px;
     overflow: hidden;
-    background: linear-gradient(to bottom,#0b0b08 0%,#0b0b08 15%,#09314a 100%);
+    background: linear-gradient(to bottom,#0b0b08 0%,#09314a 100%);
 }
 .faqstitle{
     text-align: center;
@@ -60,7 +60,7 @@
     /* display: none; */
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.05s linear;
+    transition: max-height 0.2s linear;
 }
 .open{
     max-height: 120px;

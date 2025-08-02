@@ -339,7 +339,9 @@
     }
 
     .herocontainer {
+        background-image: url("/Images/hllo3.png");
         background-image: url("/Images/heroverticalcut2_cleanup.png");
+        background-image: url("/Images/new_herovertical.png");
         min-height: 100vh;
         z-index: -1;
         /* background-attachment:unset; */
@@ -367,7 +369,7 @@
     }
 }
 
-@media screen and (max-width:632px) {
+@media screen and (max-width:652px) {
     .label {
         gap: 25px;
     }

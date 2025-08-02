@@ -11,14 +11,14 @@
 
 }
 .gallerytitle{
-    z-index: 1;
+  margin-bottom: 80px;
+    /* z-index: 1;
     color: aquamarine;
     font-size:30px;
     font-weight: bold;
     font-family: "StateWide",sans-serif;
     margin-top: 70px;
-    /* margin-bottom: 5vh; */
-    text-shadow: rgb(230, 230, 230) 0px 0px 5px;
+    text-shadow: rgb(230, 230, 230) 0px 0px 5px; */
 }
 .swiper-slide {
   background: rgba(255, 255, 255, 0.03);

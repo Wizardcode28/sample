@@ -3,10 +3,10 @@ import "./schedule.css"
 const Schedule = () => {
   return (
       <>
-      <div className="flex justify-center mt-14">
-        <div className='abouttitle text-6xl font-extrabold mb-5'>Schedule</div>
+      <div className="flex justify-center mt-14" id="schedule">
+        <div className='abouttitle text-6xl font-extrabold mb-20'>Schedule</div>
       </div>
-      <div className="container h-auto mb-20"id="schedule">
+      <div className="container h-auto mb-20" id="schedulecont">
         <div className="row">
           <div className="col-md-12">
             <div className="after:block after:clear-both">
@@ -23,14 +23,14 @@ const Schedule = () => {
                     <div className='mt-3 ml-2'>18th Oct</div>
                   </div>
 
-                  <div className="flex">
+                  <div  data-aos="fade-left" className="flex">
                     <img src="Images/50.png"width={"50px"} className='mr-3' alt=""/>
                     <h3 className="text-4xl font-[500] text-[#F68A8A] mb-1  max-md:scale-90 max-md:mb-0">
                       Registration
                     </h3>
                   </div>
 
-                  <p className="text-[18px] text-left leading-normal font-normal font-[roboto] tracking-wide max-md:scale-90 ">
+                  <p  data-aos="fade-left" className="text-[18px] text-left leading-normal font-normal font-[roboto] tracking-wide max-md:scale-90 ">
                     Version Beta is opening its doors for applications
                     starting from August 20th until October 5th.To apply, all
                     you need to do is to click on the “Register Here” Button
@@ -51,13 +51,13 @@ const Schedule = () => {
                     <img src="/Images/image3.png"className="absolute top-[10px] right-[10px] bottom-[10px] left-[10px] -z-10"alt=""/>
                     <div className='mt-3 ml-2' >Till 1 Nov</div>
                   </div>
-                  <div className="flex">
+                  <div  data-aos="fade-right" className="flex">
                     <img src="Images/50.png"width={"50px"} className='mr-3' alt=""/>
                     <h3 className="text-4xl font-[500] text-[#F68A8A] mb-1  max-md:scale-90 max-md:mb-0">
                       Ideation
                     </h3>
                   </div>
-                  <p className="text-[18px] text-left leading-normal font-normal font-[roboto] tracking-wide max-md:scale-90">
+                  <p  data-aos="fade-right" className="text-[18px] text-left leading-normal font-normal font-[roboto] tracking-wide max-md:scale-90">
                     Dive deep into current tech trends and challenges. Draw
                     inspiration from industry leaders, innovative startups,
                     and emerging technologies. Use brainstorming sessions to
@@ -77,13 +77,13 @@ const Schedule = () => {
                     <img src="/Images/image3.png"className="absolute top-[10px] right-[10px] bottom-[10px] left-[10px] -z-10"alt=""/>
                     <div className='mt-3 ml-2' >2nd Nov</div>
                   </div>
-                  <div className="flex">
+                  <div data-aos="fade-left" className="flex">
                     <img src="Images/50.png"width={"50px"} className='mr-3' alt=""/>
                     <h3 className="text-4xl font-[500] text-[#F68A8A] mb-1  max-md:scale-90 max-md:mb-0 max-md:text-2xl">
                       Announcement
                     </h3>
                   </div>
-                  <p className="text-[18px] text-left leading-normal font-normal font-[roboto] tracking-wide max-md:scale-90">
+                  <p data-aos="fade-left" className="text-[18px] text-left leading-normal font-normal font-[roboto] tracking-wide max-md:scale-90">
                     After intense brainstorming and collaboration, Best ideas
                     would be selected by judges, Their creativity and
                     problem-solving skills have set the stage for the next
@@ -102,13 +102,13 @@ const Schedule = () => {
                     <img src="/Images/image3.png"className="absolute top-[10px] right-[10px] bottom-[10px] left-[10px] -z-10"alt=""/>
                     <div className='mt-3 ml-2' >2-3 Nov</div>
                   </div>
-                  <div className="flex">
+                  <div data-aos="fade-right" className="flex">
                     <img src="Images/50.png"width={"50px"} className='mr-3' alt=""/>
                     <h3 className="text-4xl font-[500] text-[#F68A8A] mb-1  max-md:scale-90 max-md:mb-0">
                       Team
                     </h3>
                   </div>
-                  <p className="text-[18px] text-left leading-normal font-normal font-[roboto] tracking-wide max-md:scale-90">
+                  <p data-aos="fade-right" className="text-[18px] text-left leading-normal font-normal font-[roboto] tracking-wide max-md:scale-90">
                     Collaboration is key as students bring together their
                     unique skills and expertise. Enlist your teams and prepare
                     them to tackle the upcoming challenges. Get ready to
@@ -128,13 +128,13 @@ const Schedule = () => {
                     <img src="/Images/image3.png"className="absolute top-[10px] right-[10px] bottom-[10px] left-[10px] -z-10"alt=""/>
                     <div className='mt-3 ml-2' >8-10 Nov</div>
                   </div>
-                  <div className="flex">
+                  <div data-aos="fade-left" className="flex">
                     <img src="Images/50.png"width={"50px"} className='mr-3' alt=""/>
                     <h3 className="text-4xl font-[500] text-[#F68A8A] mb-1  max-md:scale-90 max-md:mb-0">
                       Hackathon
                     </h3>
                   </div>
-                  <p className="text-[18px] text-left leading-normal font-normal font-[roboto] tracking-wide max-md:scale-90">
+                  <p data-aos="fade-left" className="text-[18px] text-left leading-normal font-normal font-[roboto] tracking-wide max-md:scale-90">
                     Every truly novel concept appears insane at first, so come
                     present yours. The time for brainstorming is past; now is
                     the time to code and present hackathon presentations.{""}

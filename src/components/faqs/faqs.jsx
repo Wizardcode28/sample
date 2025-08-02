@@ -7,8 +7,20 @@ import 'aos/dist/aos.css';
 const Faqs = () => {
   const [currIndex, setcurrIndex] = useState(-1)
   const handleClick=(index)=>{
-    setcurrIndex(currIndex==index? -1 : index)
+    if(index==currIndex){
+      setcurrIndex(-1)
+    }
+    else if (currIndex!=-1){
+      setcurrIndex(-1)
+      setTimeout(()=>{
+        setcurrIndex(index)
+      },200)
+    }
+    else{
+      setcurrIndex(index)
+    }
   }
+  
   return (
     <div className='faqscontainer' id="faqs">
       <div className='faqstitle'>FAQ's</div>

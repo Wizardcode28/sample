@@ -21,7 +21,7 @@ const images = [
 const Gallery3 = () => {
   return (
     <div className="gallery-container" id="gallery">
-      <div className='abouttitle'>Gallery</div>
+      <div className='abouttitle gallerytitle'>Gallery</div>
       <div className="swiper-slide">
       <Swiper
         modules={[Autoplay, Pagination, EffectCoverflow]}

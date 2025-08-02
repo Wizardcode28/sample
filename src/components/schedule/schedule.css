@@ -1,3 +1,6 @@
 .tektur{
     font-family: "Tektur", sans-serif;
 }
+#schedulecont{
+    overflow: hidden;
+}

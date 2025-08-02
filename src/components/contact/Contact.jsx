@@ -1,6 +1,17 @@
 import React from 'react'
 import "./Contact.css"
+import { useState } from 'react'
 const Contact = () => {
+  const [insta, setInsta] = useState(false)
+  const [face, setFace] = useState(false)
+  const [link, setLink] = useState(false)
+  const defaultInsta="Images/instagram-svg.png"
+  const hoverInsta="Images/instagram.png"
+  const defaultFace="Images/facebook-svg.svg"
+  const hoverFace="Images/facebook.svg"
+  const defaultLink="Images/linkedin.svg"
+  const hoverLink="Images/linkedin-svg.svg"
+  
   return (
   <div className='contactcontainer'>
     <div className="contacts">
@@ -26,17 +37,32 @@ const Contact = () => {
       <div className="rightcontacts">
         <div className="heading">Social Links</div>
         <div className='media cdetailcont'>
-          <a href="https://www.instagram.com/istemanit/"><img src="Images/instagram.png" alt="" /></a>
+          <a href="https://www.instagram.com/istemanit/">
+          <img src={insta?hoverInsta: defaultInsta} alt="" 
+          onMouseEnter={()=>setInsta(true)}
+          onMouseLeave={()=>setInsta(false)}
+          />
+          </a>
           {/* <div className="cdetails"> */}
             <a href="https://www.instagram.com/istemanit/">Instagram</a>
           {/* </div> */}
         </div>
         <div className='media cdetailcont'>
-          <a href="https://www.facebook.com/ISTESCMANIT"><img src="Images/facebook.svg" alt="" /></a>
+          <a href="https://www.facebook.com/ISTESCMANIT">
+          <img src={face?hoverFace: defaultFace} alt="" 
+          onMouseEnter={()=>setFace(true)}
+          onMouseLeave={()=>setFace(false)}
+          />
+          </a>
           <a href="https://www.facebook.com/ISTESCMANIT">Facebook</a>
         </div>
         <div className="media cdetailcont">
-          <a href="https://www.linkedin.com/company/iste-sc-manit/"><img src="Images/linkedin.svg" alt="" /></a>
+          <a href="https://www.linkedin.com/company/iste-sc-manit/">
+          <img src={link?hoverLink: defaultLink} alt="" 
+          onMouseEnter={()=>setLink(true)}
+          onMouseLeave={()=>setLink(false)}
+          />
+          </a>
           <a href="https://www.linkedin.com/company/iste-sc-manit/">LinkedIn</a>
         </div>
       </div>
