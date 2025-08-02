@@ -9,9 +9,8 @@ const Contact = () => {
   const hoverInsta="Images/instagram.png"
   const defaultFace="Images/facebook-svg.svg"
   const hoverFace="Images/facebook.svg"
-  const defaultLink="Images/linkedin.svg"
-  const hoverLink="Images/linkedin-svg.svg"
-  
+  const defaultLink="Images/linkedin-svg.svg"
+  const hoverLink="Images/linkedin.svg"
   return (
   <div className='contactcontainer'>
     <div className="contacts">
@@ -36,32 +35,32 @@ const Contact = () => {
 
       <div className="rightcontacts">
         <div className="heading">Social Links</div>
-        <div className='media cdetailcont'>
-          <a href="https://www.instagram.com/istemanit/">
-          <img src={insta?hoverInsta: defaultInsta} alt="" 
+        <div className='media cdetailcont' 
           onMouseEnter={()=>setInsta(true)}
           onMouseLeave={()=>setInsta(false)}
-          />
+          >
+          <a href="https://www.instagram.com/istemanit/">
+          <img src={insta?hoverInsta: defaultInsta} alt=""/>
           </a>
           {/* <div className="cdetails"> */}
             <a href="https://www.instagram.com/istemanit/">Instagram</a>
           {/* </div> */}
         </div>
-        <div className='media cdetailcont'>
-          <a href="https://www.facebook.com/ISTESCMANIT">
-          <img src={face?hoverFace: defaultFace} alt="" 
+        <div className='media cdetailcont'
           onMouseEnter={()=>setFace(true)}
           onMouseLeave={()=>setFace(false)}
-          />
+          >
+          <a href="https://www.facebook.com/ISTESCMANIT">
+          <img src={face?hoverFace: defaultFace} alt="" />
           </a>
           <a href="https://www.facebook.com/ISTESCMANIT">Facebook</a>
         </div>
-        <div className="media cdetailcont">
-          <a href="https://www.linkedin.com/company/iste-sc-manit/">
-          <img src={link?hoverLink: defaultLink} alt="" 
+        <div className="media cdetailcont"
           onMouseEnter={()=>setLink(true)}
           onMouseLeave={()=>setLink(false)}
-          />
+          >
+          <a href="https://www.linkedin.com/company/iste-sc-manit/">
+          <img src={link?hoverLink: defaultLink} alt="" />
           </a>
           <a href="https://www.linkedin.com/company/iste-sc-manit/">LinkedIn</a>
         </div>

@@ -66,6 +66,7 @@
 }
 .cdetailcont:hover{
     color: violet;
+    transition:color 0.2s ease;
 }
 .cdetails{
     text-align: start;

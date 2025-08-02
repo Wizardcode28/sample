@@ -14,7 +14,7 @@ const Faqs = () => {
       setcurrIndex(-1)
       setTimeout(()=>{
         setcurrIndex(index)
-      },200)
+      },400)
     }
     else{
       setcurrIndex(index)
@@ -26,7 +26,7 @@ const Faqs = () => {
       <div className='faqstitle'>FAQ's</div>
       <div className="faqs">
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(0)}} data-aos="fade-right"  data-aos-delay="0" data-aos-offset="600">
+            <div className="question" onClick={()=>{handleClick(0)}} data-aos="fade-right"  data-aos-delay="0" data-aos-offset="400">
               Who are we?
               <img src="/Images/arrow_down.png" className={`${currIndex === 0 ? 'up' : ''}`} loading="lazy" alt=""/>
             </div>
@@ -42,7 +42,7 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(1)}} data-aos="fade-left"  data-aos-delay="150" data-aos-offset="600">
+            <div className="question" onClick={()=>{handleClick(1)}} data-aos="fade-left"  data-aos-delay="150" data-aos-offset="400">
               What are we looking in a team?
               <img src="/Images/arrow_down.png" className={`${currIndex === 1 ? 'up' : ''}`} loading="lazy"  alt="" />
             </div>
@@ -57,7 +57,7 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(2)}} data-aos="fade-right"  data-aos-delay="300" data-aos-offset="600">
+            <div className="question" onClick={()=>{handleClick(2)}} data-aos="fade-right"  data-aos-delay="300" data-aos-offset="400">
               What is version beta?
               <img src="/Images/arrow_down.png" className={`${currIndex === 2 ? 'up' : ''}`} loading="lazy" alt="" />
             </div>
@@ -72,7 +72,7 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(3)}} data-aos="fade-left" data-aos-delay="450" data-aos-offset="600">
+            <div className="question" onClick={()=>{handleClick(3)}} data-aos="fade-left" data-aos-delay="450" data-aos-offset="400">
               Will Hackathon be conducted online?
               <img src="/Images/arrow_down.png" className={`${currIndex === 3 ? 'up' : ''}`} loading="lazy"  alt="" />
             </div>
@@ -85,7 +85,7 @@ const Faqs = () => {
 
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(4)}} data-aos="fade-right" data-aos-delay="600" data-aos-offset="600">
+            <div className="question" onClick={()=>{handleClick(4)}} data-aos="fade-right" data-aos-delay="400" data-aos-offset="400">
               Who should participate?
               <img src="/Images/arrow_down.png" className={`${currIndex === 4 ? 'up' : ''}`} loading="lazy" alt="" />
             </div>
@@ -100,7 +100,7 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(5)}} data-aos="fade-left" data-aos-delay="750" data-aos-offset="600">
+            <div className="question" onClick={()=>{handleClick(5)}} data-aos="fade-left" data-aos-delay="750" data-aos-offset="400">
               What is the goal of Hackathon?
               <img src="/Images/arrow_down.png" className={`${currIndex === 5 ? 'up' : ''}`} loading="lazy" alt="" />
             </div>
@@ -113,7 +113,7 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(6)}} data-aos="fade-right" data-aos-delay="900" data-aos-offset="600">
+            <div className="question" onClick={()=>{handleClick(6)}} data-aos="fade-right" data-aos-delay="900" data-aos-offset="400">
               Number of members in a team?
               <img src="/Images/arrow_down.png" className={`${currIndex === 6 ? 'up' : ''}`} loading="lazy" alt="" />
             </div>
@@ -127,7 +127,7 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(7)}} data-aos="fade-left" data-aos-delay="1050" data-aos-offset="600">
+            <div className="question" onClick={()=>{handleClick(7)}} data-aos="fade-left" data-aos-delay="1050" data-aos-offset="400">
               How would I know if I got selected?
               <img src="/Images/arrow_down.png" className={`${currIndex === 7 ? 'up' : ''}`} loading="lazy" alt="" />
             </div>
@@ -139,7 +139,7 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(8)}} data-aos="fade-right" data-aos-delay="1200" data-aos-offset="600">
+            <div className="question" onClick={()=>{handleClick(8)}} data-aos="fade-right" data-aos-delay="1400" data-aos-offset="400">
               How to participate?
               <img src="/Images/arrow_down.png" className={`${currIndex === 8 ? 'up' : ''}`} loading="lazy" alt="" />
             </div>
@@ -152,7 +152,7 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(9)}} data-aos="fade-left" data-aos-delay="1350" data-aos-offset="600">
+            <div className="question" onClick={()=>{handleClick(9)}} data-aos="fade-left" data-aos-delay="1350" data-aos-offset="400">
               Cost for participation in Hackathon?
               <img src="/Images/arrow_down.png" className={`${currIndex === 9 ? 'up' : ''}`} loading="lazy" alt="" />
             </div>
@@ -165,7 +165,7 @@ const Faqs = () => {
             
         </div>
         <div className="faq">
-            <div className="question" onClick={()=>{handleClick(10)}} data-aos="fade-right" data-aos-delay="1500" data-aos-offset="600">
+            <div className="question" onClick={()=>{handleClick(10)}} data-aos="fade-right" data-aos-delay="1500" data-aos-offset="400">
               What is selection procedure?
               <img src="/Images/arrow_down.png" className={`${currIndex === 10 ? 'up' : ''}`} loading="lazy" alt="" />
             </div>

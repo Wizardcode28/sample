@@ -340,7 +340,7 @@
 
     .herocontainer {
         background-image: url("/Images/hllo3.png");
-        background-image: url("/Images/heroverticalcut2_cleanup.png");
+        /* background-image: url("/Images/heroverticalcut2_cleanup.png"); */
         background-image: url("/Images/new_herovertical.png");
         min-height: 100vh;
         z-index: -1;
