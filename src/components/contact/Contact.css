@@ -27,7 +27,12 @@
 }
 
 .contactcontainer img{
-    width: 30px;
+    width: 35px;
+    height: 100%;
+}
+.cdetailcont .linkedin{
+    /* width: 50px; */
+    transform: scale(1.4);
 }
 
 .leftcontacts{
@@ -54,17 +59,20 @@
     font-family: "Poppins";
     margin-bottom: 20px;
 }
+
 .cdetailcont{
     display: flex;
-    gap: 15px;
+    gap: 20px;
     width:90%;
     color: 	#E0DADC;
     font-family: 'Montserrat';
     font-size: 20px;
+    font-weight: 500;
     font-family: 'Montserrat';
     /* color: 	#A0888C; */
+    align-items: center;
 }
-.cdetailcont:hover{
+.cdetail:hover,.cdetailcont a:hover{
     color: violet;
     transition:color 0.2s ease;
 }
@@ -93,6 +101,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    font-weight: 500;
 }	
 .otherdiv{
     display: flex;
@@ -102,7 +111,15 @@
     text-decoration: none;
     color: #FF6F61;
 }
-/* media queries */
+.cdetail{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+*{
+    /* outline:1px solid lime; */
+}
+
 @media screen and (max-width:1088px){
     .contacts{
         width: 100%;
@@ -128,7 +145,7 @@
         margin-top: 40px;
     }
     .other{
-        /* margin-top: 40px; */
+        width: 90%;
     }
 }
 @media screen and (max-width:592px){
@@ -149,4 +166,9 @@
         padding: 4%;
         /* gap: 0px; */
     } 
+}
+@media screen and (max-width:450px){
+    .cdetail{
+        width:80%;
+    }
 }

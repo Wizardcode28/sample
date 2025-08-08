@@ -90,7 +90,6 @@ function App() {
         <Gallery3/>
         <Sponsors/>
         <Faqs/>
-        {/* <Footer/> */}
         <Contact/>
         </>
         )}

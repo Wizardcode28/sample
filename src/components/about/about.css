@@ -52,7 +52,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 5vh;
+    gap: 6vh;
 }
 
 .about{
@@ -61,8 +61,10 @@
     border-radius: 15px;
     padding: 5px;
     background: linear-gradient(135deg, #00f0ff, #ff00cc);
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-    
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);  
+}
+.cont .about:hover{
+    transform:scale(1.06);
 }
 .details{
     width: 50%;

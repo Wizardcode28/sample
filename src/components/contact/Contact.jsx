@@ -14,27 +14,34 @@ const Contact = () => {
   return (
   <div className='contactcontainer'>
     <div className="contacts">
-      <div className="leftcontacts">
+      <div className="leftcontacts" data-aos="fade-left">
         <div className="heading">Contact Us</div>
         <div className='mobile cdetailcont'>
           <img src="Images/phone.svg" alt="" />
           <div className="cdetails">
-            <div className="cdetail">Abhinav Rai     +91 7909474088</div>
-            <div className="cdetail">Vanshika Agarwal +91 9828534432</div>
+            <div className="cdetail">
+              <p>Abhinav Rai</p> 
+              <a href="tel:+917909474088">+91 7909474088</a>
+            </div>
+            <div className="cdetail">
+              <p>Vanshika Agarwal</p> 
+              <a href="tel:+919828534432">+91 9828534432</a>
+            </div>
           </div>
         </div>
         <div className='location cdetailcont'>
           <img src="Images/location1.png" alt="" />
-          <div className="cdetails">Maulana Azad National Institute of Technology Bhopal, 462003 (M.P.)</div>
+          <a  href="https://maps.app.goo.gl/ZERHwrJJcutMMMig8" target=" " className="cdetails">Maulana Azad National Institute of Technology Bhopal, 462003 (M.P.)</a>
         </div>
         <div className="gmail cdetailcont">
           <img src="Images/mail.svg" alt="" />
-          <div className="cdetails">istescmanit@gmail.com</div>
+          <a href="mailto:istescmanit@gmail.com" className="cdetails">istescmanit@gmail.com</a>
         </div>
       </div>
 
-      <div className="rightcontacts">
+      <div className="rightcontacts" data-aos="fade-right" data-aos-delay="200">
         <div className="heading">Social Links</div>
+
         <div className='media cdetailcont' 
           onMouseEnter={()=>setInsta(true)}
           onMouseLeave={()=>setInsta(false)}
@@ -42,10 +49,9 @@ const Contact = () => {
           <a href="https://www.instagram.com/istemanit/">
           <img src={insta?hoverInsta: defaultInsta} alt=""/>
           </a>
-          {/* <div className="cdetails"> */}
             <a href="https://www.instagram.com/istemanit/">Instagram</a>
-          {/* </div> */}
         </div>
+
         <div className='media cdetailcont'
           onMouseEnter={()=>setFace(true)}
           onMouseLeave={()=>setFace(false)}
@@ -55,12 +61,13 @@ const Contact = () => {
           </a>
           <a href="https://www.facebook.com/ISTESCMANIT">Facebook</a>
         </div>
+
         <div className="media cdetailcont"
           onMouseEnter={()=>setLink(true)}
           onMouseLeave={()=>setLink(false)}
           >
           <a href="https://www.linkedin.com/company/iste-sc-manit/">
-          <img src={link?hoverLink: defaultLink} alt="" />
+          <img src={link?hoverLink: defaultLink} alt="" className='linkedin' />
           </a>
           <a href="https://www.linkedin.com/company/iste-sc-manit/">LinkedIn</a>
         </div>

@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className="navcontent">
           {/* Logo */}
           <div className="desktop-logo">
-            <motion.img src="/Images/newlogo.png" variants={imgvariants} initial="initial" animate="animate" className='istelogo' alt="logo" />
+            <motion.a href="https://www.istemanit.in/" target="_blank"><motion.img src="/Images/newlogo.png" variants={imgvariants} initial="initial" animate="animate" className='istelogo' alt="logo" /></motion.a>
           </div>
 
           {/* Desktop Menu (hidden on mobile) */}

@@ -98,12 +98,14 @@
     display: flex;
     justify-content: space-between;
     gap: 90px;
-    font-size: 30px;
-    font-family: "League Spartan", sans-serif;
+    font-size: 23px;
+    /* font-family: "League Spartan", sans-serif; */
     color: #7b8d52;
     font-weight: bold;
     font-family: Ubuntu;
-
+    text-shadow: 0 0 3px #0ff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .content {
@@ -151,39 +153,18 @@
     transition: text-shadow 0.3s;
 }
 
-.title1 {
-    color: #ff7575;
-    color: #00FFF1;
-    font-size: 40px;
-    height: 14vh;
-    /* outline: 1px solid lime; */
-    background: linear-gradient(90deg, #FF4F79, #00FFF1, #FF4F79);
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 0px 0px 50px #00FFF1;
-    font-weight: bolder;
-    /* font-family: Poppins;
-    font-family: Playfair Display;
-    font-family: Ubuntu;
-    font-family: Montserrat; */
-    font-family: Orbitron;
-}
 
-.title1:hover {
-    text-shadow: 0px 0px 30px #00FFF1;
-    transition: text-shadow 0.3s;
-}
 
 @keyframes opac {
     0% {
-        opacity: 0.6;
+        opacity: 0.4;
     }
 
     50% {
         opacity: 1;
     }
     100%{
-        opacity: 0.6;
+        opacity: 0.4;
     }
 }
 
@@ -222,7 +203,7 @@
 
 .version {
     width: 90%;
-    /* animation: opac 3s infinite ease-in-out; */
+    animation: opac 3s infinite ease-in-out;
 }
 
 .timeline {
@@ -343,6 +324,7 @@
     .herocontainer {
         /* background-image: url("/Images/hllo3.png"); */
         /* background-image: url("/Images/heroverticalcut2_cleanup.png"); */
+        /* background-image: url("/Images/heroverticalcut2 copy.png"); */
         background-image: url("/Images/new_herovertical.png");
         min-height: 100vh;
         z-index: -1;
@@ -405,9 +387,12 @@
 
     .label {
         gap: 30px;
-        font-size: 22px;
+        font-size: 18px;
     }
 
+}
+*{
+    /* outline: 1px solid lime; */
 }
 @media screen and (max-width:400px) {
     .countdown .time {
@@ -417,7 +402,7 @@
     }
     .label{
     gap: 5vw;
-    font-size: 15px;
+    font-size: 16px;
     }
     .title{
         height: 22vh;

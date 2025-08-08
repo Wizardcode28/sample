@@ -60,12 +60,22 @@ img{
     font-weight: bold;
     font-family: Poppins;
 }
-.second{
+.one{
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+}
+.second,.third{
     transform: scale(0.8);
+    transition: transform 0.5s ease-in-out;
 }
-.third{
-    transform: scale(0.65);
+
+.one:hover{
+    transform: scale(1.3);
 }
+.second:hover,.third:hover{
+    transform: scale(1);
+}
+
 .prizes div img{
     width: 250px;
     object-fit: cover;
@@ -89,16 +99,18 @@ img{
         flex-direction: column;
         gap: 30px;
     }
+
     .one{
+        transform: scale(0.9);
         order: 0;
     }
     .second{
         order: 1;
-        transform: scale(1);
+        transform: scale(0.9);
     }
     .third{
         order: 2;
-        transform: scale(1);
+        transform: scale(0.9);
     }
     #prizecontainer{
         height: auto;
