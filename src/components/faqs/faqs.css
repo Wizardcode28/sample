@@ -5,9 +5,12 @@
 .faqscontainer{
     width: 100%;
     /* height: min(150vh,max-content); */
-    padding: 80px 20px;
+    padding: 40px 20px;
     overflow: hidden;
     background: linear-gradient(to bottom,#0b0b08 0%,#09314a 100%);
+}
+*{
+    /* outline: 1px solid lime; */
 }
 .faqstitle{
     margin-bottom: 80px;

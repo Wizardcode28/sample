@@ -40,7 +40,7 @@ const leftvariants={
     x:0,
     opacity:1,
     transition:{
-      duration:2,
+      duration:1.5,
     }
   }
 }
@@ -51,7 +51,7 @@ const Hero = () => {
     const now = new Date();
     const diff = targetDate - now;
 
-    const total = Math.max(diff, 0); // Avoid negative values
+    const total = Math.max(diff, 0);
     return {
       days: Math.floor(total / (1000 * 60 * 60 * 24)),
       hours: Math.floor((total / (1000 * 60 * 60)) % 24),

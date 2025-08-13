@@ -10,7 +10,6 @@ import Prizes from './components/Prizes/prizes'
 import Gallery3 from './components/gallery/gallery'
 import Sponsors from './components/sponsors/sponsors'
 import Faqs from './components/faqs/faqs'
-// import Footer from './components/footer/footer'
 import Loader from "./components/loader/Loader.jsx"
 import Contact from "./components/contact/Contact.jsx"
 

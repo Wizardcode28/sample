@@ -1,7 +1,7 @@
 .contactcontainer{
     width: 100%;
     height: max-content;
-    padding: 80px 20px;
+    padding: 50px 20px;
     text-align: center;
     overflow: hidden;
     /* background-color: #370812; */
@@ -73,7 +73,7 @@
     align-items: center;
 }
 .cdetail:hover,.cdetailcont a:hover{
-    color: violet;
+    color: #13f4d5;
     transition:color 0.2s ease;
 }
 .cdetails{
@@ -134,7 +134,7 @@
     .contacts{
         flex-direction: column;
         /* margin-bottom: 15vh; */
-        padding: 8%;
+        padding: 0% 8%;
     }
     .leftcontacts,.rightcontacts{
         width: 100%;
@@ -163,7 +163,7 @@
         padding-right: 0;
     }
     .contacts{
-        padding: 4%;
+        padding: 0% 4%;
         /* gap: 0px; */
     } 
 }
