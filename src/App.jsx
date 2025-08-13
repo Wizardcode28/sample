@@ -11,17 +11,18 @@ import Gallery3 from './components/gallery/gallery'
 import Sponsors from './components/sponsors/sponsors'
 import Faqs from './components/faqs/faqs'
 import Loader from "./components/loader/Loader.jsx"
+import Loader2 from "./components/loader2/TechPreloader.jsx"
 import Contact from "./components/contact/Contact.jsx"
 
 function App() {
   const [loading, setLoading] = useState(true)
   
-  useEffect(()=>{
-    const timer= setTimeout(()=>{
-      setLoading(false)
-    },5000)
-  return ()=>clearTimeout(timer)
-},[])
+//   useEffect(()=>{
+//     const timer= setTimeout(()=>{
+//       setLoading(false)
+//     },15000)
+//   return ()=>clearTimeout(timer)
+// },[])
 
   useEffect(() => {
     if(!loading){
@@ -75,7 +76,7 @@ function App() {
     <div className='maincontainer' ref={containerRef}>
       <div ref={lightRef} className="cursor-light"style={{ display: loading ? "none" : "block" }}/>
     {
-      loading? <Loader/>
+      loading? (<Loader2 onComplete={() => setLoading(false)} />)
       :
       (  
         <>

@@ -12,7 +12,9 @@
     align-items: center;
     /* gap: 30px; */
 }
-
+*{
+    /* outline: 1px solid lime; */
+}
 .contacts{
     height: max-content;
     display: flex;
