@@ -13,6 +13,7 @@ import Faqs from './components/faqs/faqs'
 import Loader from "./components/loader/Loader.jsx"
 import Loader2 from "./components/loader2/TechPreloader.jsx"
 import Contact from "./components/contact/Contact.jsx"
+import Footer from "./components/footer/footer.jsx"
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -90,7 +91,7 @@ function App() {
         <Gallery3/>
         <Sponsors/>
         <Faqs/>
-        <Contact/>
+        <Footer/>
         </>
         )}
     </div>

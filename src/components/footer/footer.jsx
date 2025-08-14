@@ -130,7 +130,8 @@ export default function Footer() {
                           color: '#ea580c',
                         }
                       }}>
-                        Abhinav Rai &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +91 7909474088
+                        Abhinav Rai &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                        <Link sx={{cursor:'pointer', textDecoration:'none', color:'inherit'}} href="tel:+917909474088"> +91 7909474088 </Link>
                       </Typography>
                       <Typography variant="body2" sx={{
                         fontSize: { xs: 13, sm: 16, md: 18 },
@@ -140,7 +141,7 @@ export default function Footer() {
                           color: '#ea580c',
                         }
                       }}>
-                        Vanshika Agarwal &nbsp; +91 9828534432
+                        Vanshika Agarwal &nbsp; <Link sx={{cursor:'pointer', textDecoration:'none', color:'inherit' }} href="tel:+919828534432"> +91 9828534432 </Link>
                       </Typography>
                     </Box>
                   </Stack>
@@ -238,6 +239,9 @@ export default function Footer() {
                       '&:hover .icon-hover': {
                         display: 'inline-block',
                       },
+                      '&:hover .social-text': {
+                        color: '#ea580c',
+                      }
                     }}
                   >
 
@@ -405,8 +409,34 @@ export default function Footer() {
       />
 
       <Container sx={{ display: 'flex',flexDirection: 'row',flexWrap: 'wrap',justifyContent: 'center',alignItems: 'center',gap: {xs:'2rem', md: '20rem'} ,marginTop: '1rem',textAlign: 'center'}}>
-        <Link sx={{textDecoration: 'none',cursor: 'pointer', color: '#b5b5b6', fontSize: { xs: '16px', sm: '18px', md: '20px' }, fontFamily: 'Roboto', fontWeight: '600', whiteSpace: 'nowrap'}}> Code Of Conduct Devfolio </Link>
-        <Link sx={{textDecoration: 'none',cursor: 'pointer', color: '#b5b5b6', fontSize: { xs: '16px', sm: '18px', md: '20px' }, fontFamily: 'Roboto', fontWeight: '600', whiteSpace: 'nowrap'}}> Rulebook </Link>
+        <Link sx={{
+          textDecoration: 'none',
+          cursor: 'pointer',
+          color: '#b5b5b6',
+          '&:hover': {color: '#ea580c'},
+          fontSize: { xs: '16px', sm: '18px', md: '20px' },
+          fontFamily: 'Roboto',
+          fontWeight: '600',
+          whiteSpace: 'nowrap'
+          }}
+
+          href = "https://devfolio.co/code-of-conduct"
+
+        > Code Of Conduct Devfolio </Link>
+
+        <Link sx={{
+          textDecoration: 'none',
+          cursor: 'pointer',
+          color: '#b5b5b6',
+          '&:hover': {color: '#ea580c'},
+          fontSize: { xs: '16px', sm: '18px', md: '20px' },
+          fontFamily: 'Roboto',
+          fontWeight: '600',
+          whiteSpace: 'nowrap'
+          }}
+          href = "https://version-beta-main.vercel.app/Images/VBrulebook-2024.pdf"
+          
+        > Rulebook </Link>
       </Container>
       
       <Box
