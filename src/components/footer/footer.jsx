@@ -40,67 +40,23 @@ export default function Footer() {
             mt: { xs: 2, md: 6 }
           }}
         >
-          
-          {/* <Grid item xs={12} lg={4} sx={{width: '100%'}}>
-            <Box sx={{ textAlign: { xs: 'center', lg: 'left' }, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-              <Stack 
-                direction="row" 
-                alignItems="center" 
-                spacing={2} 
-                sx={{ 
-                  justifyContent: { xs: 'center', lg: 'flex-start' },
-                  mb: 2 
-                }}
-              >
-                <Avatar
-                  sx={{
-                    width: { xs: 100, sm: 140 },
-                    height: { xs: 50, sm: 60 },
-                    borderRadius: 0,
-                    bgcolor: 'transparent'
-                  }}
-                  alt="ISTE Logo"
-                  src="/Images/Logo.svg"
-                  variant="square"
-                >
-                  
-                </Avatar>
-              </Stack>
-              
-              <Typography 
-                variant="caption" 
-                color="#7a7a7a" 
-                sx={{ 
-                  display: 'block',
-                  lineHeight: 1.5,
-                  maxWidth: '300px',
-                  mx: { xs: 'auto', lg: 0 }
-                }}
-              >
-                BEST STUDENT'S CHAPTER IN MADHYA PRADESH-CHHATTISGARH REGION FROM 3 CONSECUTIVE YEARS
-              </Typography>
-            </Box>
-          </Grid> */}
-
           <Grid item xs={12} lg={8} sx={{width: '100%'}} >
             <Box 
               sx={{ 
                 display: 'flex', 
                 flexDirection: { xs: 'column', md: 'row' }, 
                 justifyContent: { xs: 'center', md: 'center' }, 
-                alignItems: { xs: 'center', md: 'flex-start' },
+                alignItems: 'flex-start',
                 gap: { xs: 4, md: 15 }
               }}
             >
-
-
               <Box sx={{ textAlign: 'left' }}>
                 <Typography
                   variant="h6"
                   sx={{
                     mb: 3,
-                    textAlign: { xs: 'center', md: 'left' },
-                    fontSize: { xs: 28, md: 42 },
+                    textAlign: 'left',
+                    fontSize: '40px',
                     color: '#ea580c',
                     fontWeight: 600,
                     transition: 'transform 0.3s ease',
@@ -111,8 +67,6 @@ export default function Footer() {
                 >
                   Contact Us
                 </Typography>
-
-
                 <Stack spacing={{ xs: 2, md: 4 }}>
                   <Stack
                     direction="row"
@@ -122,27 +76,54 @@ export default function Footer() {
                   >
                     <Phone sx={{ color: '#ea580c', fontSize: 35 }} />
                     <Box>
-                      <Typography variant="body2" sx={{
-                        fontSize: { xs: 13, sm: 16, md: 18 },
+                      <Box sx={{
+                        display: { xs: 'block', sm: 'flex' },
+                        alignItems: 'center',
+                        gap: { sm: 8.8 },
                         color: '#b5b5b6',
                         transition: 'color 0.3s ease',
                         '&:hover': {
                           color: '#ea580c',
                         }
                       }}>
-                        Abhinav Rai &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                        <Link sx={{cursor:'pointer', textDecoration:'none', color:'inherit'}} href="tel:+917909474088"> +91 7909474088 </Link>
-                      </Typography>
-                      <Typography variant="body2" sx={{
-                        fontSize: { xs: 13, sm: 16, md: 18 },
+                        <Typography variant="body2" sx={{
+                          fontSize: '16px',
+                        }}>
+                          Abhinav Rai
+                        </Typography>
+                        <Link href="tel:+917909474088" sx={{ textDecoration: 'none', color: 'inherit' }}>
+                          <Typography variant="body2" sx={{
+                            fontSize: '16px',
+                          }}>
+                            +91 7909474088
+                          </Typography>
+                        </Link>
+                      </Box>
+                      
+                      <Box sx={{
+                        mt: { xs: 1, md: 2 },
+                        display: { xs: 'block', sm: 'flex' },
+                        alignItems: 'center',
+                        gap: { sm: 3 },
                         color: '#b5b5b6',
                         transition: 'color 0.3s ease',
                         '&:hover': {
                           color: '#ea580c',
                         }
                       }}>
-                        Vanshika Agarwal &nbsp; <Link sx={{cursor:'pointer', textDecoration:'none', color:'inherit' }} href="tel:+919828534432"> +91 9828534432 </Link>
-                      </Typography>
+                        <Typography variant="body2" sx={{
+                          fontSize: '16px',
+                        }}>
+                          Vanshika Agarwal
+                        </Typography>
+                        <Link href="tel:+919828534432" sx={{ textDecoration: 'none', color: 'inherit' }}>
+                          <Typography variant="body2" sx={{
+                            fontSize: '16px',
+                          }}>
+                            +91 9828534432
+                          </Typography>
+                        </Link>
+                      </Box>
                     </Box>
                   </Stack>
 
@@ -155,17 +136,16 @@ export default function Footer() {
                     <LocationOn sx={{ color: '#ea580c', fontSize: 35, mt: 0.5 }} />
                     <Link href="https://maps.app.goo.gl/ZERHwrJJcutMMMig8" sx={{cursor:'pointer', textDecoration:'none'}}  >
                       <Typography variant="body2" sx={{
-                        fontSize: { xs: 13, sm: 16, md: 17 },
+                        fontSize: '16px',
                         color: '#b5b5b6',
                         transition: 'color 0.3s ease',
                         '&:hover': {
                           color: '#ea580c',
                         }
                       }}>
-                        Maulana Azad National Institute Of <br></br>
-                        Technology Bhopal, 462003 (M.P.)
+                        Maulana Azad National Institute <br></br>
+                        Of Technology Bhopal, 462003 (M.P.)
                       </Typography>
-
                     </Link>
                   </Stack>
 
@@ -178,7 +158,7 @@ export default function Footer() {
                     <Email sx={{ color: '#ea580c', fontSize: 35 }} />
                     <Typography variant="body2" sx={{
                       cursor: 'pointer',
-                        fontSize: { xs: 13, sm: 16, md: 17 },
+                        fontSize: '16px',
                         color: '#b5b5b6',
                         transition: 'color 0.3s ease',
                         '&:hover': {
@@ -208,8 +188,8 @@ export default function Footer() {
                     mb: 3,
                     color: '#ea580c',
                     fontWeight: 600,
-                    textAlign: { xs: 'center', md: 'left' },
-                    fontSize: { xs: 28, md: 40 },
+                    textAlign: 'left',
+                    fontSize: '40px',
                     transition: 'transform 0.3s ease',
                     '&:hover': {
                       transform: 'scale(1.1)'
@@ -218,8 +198,6 @@ export default function Footer() {
                 >
                   Social Links
                 </Typography>
-
-
                 <Stack spacing={{ xs: 2, md: 5 }}>
                   <Link
                     href="https://www.instagram.com/istemanit/"
@@ -244,7 +222,6 @@ export default function Footer() {
                       }
                     }}
                   >
-
                     <Box
                       className="icon-wrapper"
                       sx={{
@@ -257,7 +234,6 @@ export default function Footer() {
                       }}
                     >
                       <Instagram className="icon-default" sx={{ color: '#ea580c', fontSize: 40 }} />
-
                       <Box
                         component="img"
                         className="icon-hover"
@@ -271,14 +247,10 @@ export default function Footer() {
                         }}
                       />
                     </Box>
-
                     <Typography className='social-text' variant="body2" sx={{ fontSize: 20, color: '#b5b5b6' }}>
                       Instagram
                     </Typography>
                   </Link>
-
-
-
                   <Link
                     href="https://www.facebook.com/ISTESCMANIT"
                     underline="none"
@@ -314,7 +286,6 @@ export default function Footer() {
                       }}
                     >
                       <Facebook className="icon-default" sx={{ color: '#ea580c', fontSize: 40 }} />
-
                       <Box
                         component="img"
                         className="icon-hover"
@@ -328,12 +299,10 @@ export default function Footer() {
                         }}
                       />
                     </Box>
-
                     <Typography className='social-text' variant="body2" sx={{ fontSize: 20, color: '#b5b5b6' }}>
                       Facebook
                     </Typography>
                   </Link>
-
                   <Link
                     href="https://www.linkedin.com/company/iste-sc-manit/"
                     underline="none"
@@ -369,7 +338,6 @@ export default function Footer() {
                       }}
                     >
                       <LinkedInIcon className="icon-default" sx={{ color: '#ea580c', fontSize: 45, marginLeft: {md: '-8.5px', xs: '-10px'} }} />
-
                       <Box
                         component="img"
                         className="icon-hover"
@@ -384,7 +352,6 @@ export default function Footer() {
                         }}
                       />
                     </Box>
-
                     <Typography className="social-text" variant="body2" sx={{ fontSize: 20, color: '#b5b5b6' }}>
                       LinkedIn
                     </Typography>
@@ -395,7 +362,6 @@ export default function Footer() {
           </Grid>
         </Grid>
       </Container>
-
       <Box
         sx={{
           width: '100%',
@@ -407,38 +373,47 @@ export default function Footer() {
           display: { xs: 'flex', lg: 'flex', md: 'flex' }
         }}
       />
-
-      <Container sx={{ display: 'flex',flexDirection: 'row',flexWrap: 'wrap',justifyContent: 'center',alignItems: 'center',gap: {xs:'2rem', md: '20rem'} ,marginTop: '1rem',textAlign: 'center'}}>
-        <Link sx={{
-          textDecoration: 'none',
-          cursor: 'pointer',
-          color: '#b5b5b6',
-          '&:hover': {color: '#ea580c'},
-          fontSize: { xs: '16px', sm: '18px', md: '20px' },
-          fontFamily: 'Roboto',
-          fontWeight: '600',
-          whiteSpace: 'nowrap'
+      <Container sx={{ 
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'nowrap',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: {xs:'2rem', md: '20rem'},
+        marginTop: '1rem',
+        textAlign: 'center'
+      }}>
+        <Link 
+          sx={{
+            textDecoration: 'none',
+            cursor: 'pointer',
+            color: '#b5b5b6',
+            '&:hover': {color: '#ea580c'},
+            fontSize: { xs: '16px', sm: '18px', md: '20px' },
+            fontFamily: 'Roboto',
+            fontWeight: '600',
+            whiteSpace: 'nowrap'
           }}
-
-          href = "https://devfolio.co/code-of-conduct"
-
-        > Code Of Conduct Devfolio </Link>
-
-        <Link sx={{
-          textDecoration: 'none',
-          cursor: 'pointer',
-          color: '#b5b5b6',
-          '&:hover': {color: '#ea580c'},
-          fontSize: { xs: '16px', sm: '18px', md: '20px' },
-          fontFamily: 'Roboto',
-          fontWeight: '600',
-          whiteSpace: 'nowrap'
+          href="https://devfolio.co/code-of-conduct"
+        >
+          Code Of Conduct Devfolio
+        </Link>
+        <Link 
+          sx={{
+            textDecoration: 'none',
+            cursor: 'pointer',
+            color: '#b5b5b6',
+            '&:hover': {color: '#ea580c'},
+            fontSize: { xs: '16px', sm: '18px', md: '20px' },
+            fontFamily: 'Roboto',
+            fontWeight: '600',
+            whiteSpace: 'nowrap'
           }}
-          href = "https://version-beta-main.vercel.app/Images/VBrulebook-2024.pdf"
-          
-        > Rulebook </Link>
+          href="https://version-beta-main.vercel.app/Images/VBrulebook-2024.pdf"
+        >
+          Rulebook
+        </Link>
       </Container>
-      
       <Box
         sx={{
           width: '100%',
@@ -450,12 +425,9 @@ export default function Footer() {
           display: { xs: 'flex', lg: 'flex', md: 'flex' }
         }}
       />
-
       <Typography variant="caption" align="center" sx={{ mt: 4, display: 'block', color: '#b5b5b6',fontSize: '16px', fontWeight: '600' }}>
-        Copyright © 2025 by  <Link href="https://www.istemanit.in/" sx={{textDecoration: 'none', cursor: 'pointer'}} >ISTE SC MANIT</Link> . All rights reserved.
+        Copyright © 2025 by <Link href="https://www.istemanit.in/" sx={{textDecoration: 'none', cursor: 'pointer'}} >ISTE SC MANIT</Link> . All rights reserved.
       </Typography>
-
     </Box>
-    
   );
 }
