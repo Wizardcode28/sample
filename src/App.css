@@ -12,10 +12,6 @@
   overflow: hidden;
 }
 
-html{
-  font-size: 100%;
-}
-
 .cursor-light{
     position: absolute;
     width: 200px;
