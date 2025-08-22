@@ -26,7 +26,9 @@ export default function Footer() {
         backgroundColor: '#09314a',
         color: 'white',
         py: 2,
-        px: 3
+        px: 3,
+        fontFamily: '"Tektur", sans-serif',
+        fontWeight: 500,
       }}
     >
       <Container maxWidth="lg">
@@ -41,11 +43,11 @@ export default function Footer() {
           }}
         >
           <Grid item xs={12} lg={8} sx={{width: '100%'}} >
-            <Box 
-              sx={{ 
-                display: 'flex', 
-                flexDirection: { xs: 'column', md: 'row' }, 
-                justifyContent: { xs: 'center', md: 'center' }, 
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: { xs: 'column', md: 'row' },
+                justifyContent: { xs: 'center', md: 'center' },
                 alignItems: 'flex-start',
                 gap: { xs: 4, md: 15 }
               }}
@@ -56,9 +58,10 @@ export default function Footer() {
                   sx={{
                     mb: 3,
                     textAlign: 'left',
-                    fontSize: '40px',
+                    fontSize: '2.5rem',
                     color: '#ea580c',
-                    fontWeight: 600,
+                    fontWeight: 500,
+                    fontFamily: '"Tektur", sans-serif',
                     transition: 'transform 0.3s ease',
                     '&:hover': {
                       transform: 'scale(1.1)'
@@ -74,7 +77,7 @@ export default function Footer() {
                     spacing={{ xs: 2, md: 3 }}
                     sx={{ justifyContent: 'flex-start' }}
                   >
-                    <Phone sx={{ color: '#ea580c', fontSize: 35 }} />
+                    <Phone sx={{ color: '#ea580c', fontSize: '2.1875rem' }} />
                     <Box>
                       <Box sx={{
                         display: { xs: 'block', sm: 'flex' },
@@ -87,19 +90,24 @@ export default function Footer() {
                         }
                       }}>
                         <Typography variant="body2" sx={{
-                          fontSize: '16px',
+                          fontSize: '0.9rem',
+                          fontFamily: '"Tektur", sans-serif',
+                          fontWeight: 500,
+                          whiteSpace: 'nowrap',
                         }}>
                           Abhinav Rai
                         </Typography>
                         <Link href="tel:+917909474088" sx={{ textDecoration: 'none', color: 'inherit' }}>
                           <Typography variant="body2" sx={{
-                            fontSize: '16px',
+                            fontSize: '0.9rem',
+                            fontFamily: '"Tektur", sans-serif',
+                            fontWeight: 500,
                           }}>
                             +91 7909474088
                           </Typography>
                         </Link>
                       </Box>
-                      
+
                       <Box sx={{
                         mt: { xs: 1, md: 2 },
                         display: { xs: 'block', sm: 'flex' },
@@ -112,13 +120,18 @@ export default function Footer() {
                         }
                       }}>
                         <Typography variant="body2" sx={{
-                          fontSize: '16px',
+                          fontSize: '0.9rem',
+                          fontFamily: '"Tektur", sans-serif',
+                          fontWeight: 500,
+                          whiteSpace: 'nowrap',
                         }}>
                           Vanshika Agarwal
                         </Typography>
                         <Link href="tel:+919828534432" sx={{ textDecoration: 'none', color: 'inherit' }}>
                           <Typography variant="body2" sx={{
-                            fontSize: '16px',
+                            fontSize: '0.9rem',
+                            fontFamily: '"Tektur", sans-serif',
+                            fontWeight: 500,
                           }}>
                             +91 9828534432
                           </Typography>
@@ -133,17 +146,20 @@ export default function Footer() {
                     spacing={{ xs: 2, md: 3 }}
                     sx={{ justifyContent: 'flex-start' }}
                   >
-                    <LocationOn sx={{ color: '#ea580c', fontSize: 35, mt: 0.5 }} />
+                    <LocationOn sx={{ color: '#ea580c', fontSize: '2.1875rem', mt: 0.5 }} />
                     <Link href="https://maps.app.goo.gl/ZERHwrJJcutMMMig8" sx={{cursor:'pointer', textDecoration:'none'}}  >
                       <Typography variant="body2" sx={{
-                        fontSize: '16px',
+                        fontSize: '0.9rem',
                         color: '#b5b5b6',
+                        fontFamily: '"Tektur", sans-serif',
+                        fontWeight: 500,
                         transition: 'color 0.3s ease',
+                        whiteSpace: 'nowrap',
                         '&:hover': {
                           color: '#ea580c',
                         }
                       }}>
-                        Maulana Azad National Institute <br></br>
+                        Maulana Azad National Institute<br />
                         Of Technology Bhopal, 462003 (M.P.)
                       </Typography>
                     </Link>
@@ -155,12 +171,15 @@ export default function Footer() {
                     spacing={{ xs: 2, md: 3 }}
                     sx={{ justifyContent: 'flex-start' }}
                   >
-                    <Email sx={{ color: '#ea580c', fontSize: 35 }} />
+                    <Email sx={{ color: '#ea580c', fontSize: '2.1875rem' }} />
                     <Typography variant="body2" sx={{
                       cursor: 'pointer',
-                        fontSize: '16px',
+                        fontSize: '0.9rem',
                         color: '#b5b5b6',
+                        fontFamily: '"Tektur", sans-serif',
+                        fontWeight: 500,
                         transition: 'color 0.3s ease',
+                        whiteSpace: 'nowrap',
                         '&:hover': {
                           color: '#ea580c',
                         }
@@ -174,8 +193,8 @@ export default function Footer() {
               <Box
                 sx={{
                   width: '1px',
-                  height: '240px',
-                  marginTop: '55px',
+                  height: '15rem',
+                  marginTop: '3.4375rem',
                   backgroundColor: '#7a7a7a',
                   display: { xs: 'none', lg: 'flex', md: 'flex' }
                 }}
@@ -187,9 +206,10 @@ export default function Footer() {
                   sx={{
                     mb: 3,
                     color: '#ea580c',
-                    fontWeight: 600,
+                    fontWeight: 500,
+                    fontFamily: '"Tektur", sans-serif',
                     textAlign: 'left',
-                    fontSize: '40px',
+                    fontSize: '2.5rem',
                     transition: 'transform 0.3s ease',
                     '&:hover': {
                       transform: 'scale(1.1)'
@@ -225,29 +245,35 @@ export default function Footer() {
                     <Box
                       className="icon-wrapper"
                       sx={{
-                        width: 35,
-                        height: 35,
+                        width: '2.1875rem',
+                        height: '2.1875rem',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                         transition: 'transform 0.3s ease',
                       }}
                     >
-                      <Instagram className="icon-default" sx={{ color: '#ea580c', fontSize: 40 }} />
+                      <Instagram className="icon-default" sx={{ color: '#ea580c', fontSize: '2.5rem' }} />
                       <Box
                         component="img"
                         className="icon-hover"
                         src="/Images/instagram.png"
                         alt="Instagram Logo"
                         sx={{
-                          width: 35,
-                          height: 35,
+                          width: '2.1875rem',
+                          height: '2.1875rem',
                           display: 'none',
                           objectFit: 'contain',
                         }}
                       />
                     </Box>
-                    <Typography className='social-text' variant="body2" sx={{ fontSize: 20, color: '#b5b5b6' }}>
+                    <Typography className='social-text' variant="body2" sx={{
+                      fontSize: '1.25rem',
+                      color: '#b5b5b6',
+                      fontFamily: '"Tektur", sans-serif',
+                      fontWeight: 500,
+                      whiteSpace: 'nowrap',
+                    }}>
                       Instagram
                     </Typography>
                   </Link>
@@ -277,29 +303,35 @@ export default function Footer() {
                     <Box
                       className="icon-wrapper"
                       sx={{
-                        width: 33,
-                        height: 33,
+                        width: '2.0625rem',
+                        height: '2.0625rem',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                         transition: 'transform 0.3s ease',
                       }}
                     >
-                      <Facebook className="icon-default" sx={{ color: '#ea580c', fontSize: 40 }} />
+                      <Facebook className="icon-default" sx={{ color: '#ea580c', fontSize: '2.5rem' }} />
                       <Box
                         component="img"
                         className="icon-hover"
                         src="/Images/facebook.svg"
                         alt="Instagram Logo"
                         sx={{
-                          width: 33,
-                          height: 33,
+                          width: '2.0625rem',
+                          height: '2.0625rem',
                           display: 'none',
                           objectFit: 'contain',
                         }}
                       />
                     </Box>
-                    <Typography className='social-text' variant="body2" sx={{ fontSize: 20, color: '#b5b5b6' }}>
+                    <Typography className='social-text' variant="body2" sx={{
+                      fontSize: '1.25rem',
+                      color: '#b5b5b6',
+                      fontFamily: '"Tektur", sans-serif',
+                      fontWeight: 500,
+                      whiteSpace: 'nowrap',
+                    }}>
                       Facebook
                     </Typography>
                   </Link>
@@ -329,30 +361,36 @@ export default function Footer() {
                     <Box
                       className="icon-wrapper"
                       sx={{
-                        width: 45,
-                        height: 45,
+                        width: '2.8125rem',
+                        height: '2.8125rem',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                         transition: 'transform 0.3s ease',
                       }}
                     >
-                      <LinkedInIcon className="icon-default" sx={{ color: '#ea580c', fontSize: 45, marginLeft: {md: '-8.5px', xs: '-10px'} }} />
+                      <LinkedInIcon className="icon-default" sx={{ color: '#ea580c', fontSize: '2.8125rem', marginLeft: {md: '-0.53125rem', xs: '-0.625rem'} }} />
                       <Box
                         component="img"
                         className="icon-hover"
                         src="/Images/linkedin.svg"
                         alt="Instagram Logo"
                         sx={{
-                          width: 45,
-                          height: 45,
+                          width: '2.8125rem',
+                          height: '2.8125rem',
                           display: 'none',
                           objectFit: 'contain',
-                          marginLeft: {md: '-12px', xs: '-13.5px'}
+                          marginLeft: {md: '-0.75rem', xs: '-0.84375rem'}
                         }}
                       />
                     </Box>
-                    <Typography className="social-text" variant="body2" sx={{ fontSize: 20, color: '#b5b5b6' }}>
+                    <Typography className="social-text" variant="body2" sx={{
+                      fontSize: '1.25rem',
+                      color: '#b5b5b6',
+                      fontFamily: '"Tektur", sans-serif',
+                      fontWeight: 500,
+                      whiteSpace: 'nowrap',
+                    }}>
                       LinkedIn
                     </Typography>
                   </Link>
@@ -373,7 +411,7 @@ export default function Footer() {
           display: { xs: 'flex', lg: 'flex', md: 'flex' }
         }}
       />
-      <Container sx={{ 
+      <Container sx={{
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'nowrap',
@@ -383,30 +421,30 @@ export default function Footer() {
         marginTop: '1rem',
         textAlign: 'center'
       }}>
-        <Link 
+        <Link
           sx={{
             textDecoration: 'none',
             cursor: 'pointer',
             color: '#b5b5b6',
             '&:hover': {color: '#ea580c'},
-            fontSize: { xs: '16px', sm: '18px', md: '20px' },
-            fontFamily: 'Roboto',
-            fontWeight: '600',
+            fontSize: { xs: '1rem', sm: '1.125rem', md: '1.25rem' },
+            fontFamily: '"Tektur", sans-serif',
+            fontWeight: 500,
             whiteSpace: 'nowrap'
           }}
           href="https://devfolio.co/code-of-conduct"
         >
           Code Of Conduct Devfolio
         </Link>
-        <Link 
+        <Link
           sx={{
             textDecoration: 'none',
             cursor: 'pointer',
             color: '#b5b5b6',
             '&:hover': {color: '#ea580c'},
-            fontSize: { xs: '16px', sm: '18px', md: '20px' },
-            fontFamily: 'Roboto',
-            fontWeight: '600',
+            fontSize: { xs: '1rem', sm: '1.125rem', md: '1.25rem' },
+            fontFamily: '"Tektur", sans-serif',
+            fontWeight: 500,
             whiteSpace: 'nowrap'
           }}
           href="https://version-beta-main.vercel.app/Images/VBrulebook-2024.pdf"
@@ -425,8 +463,20 @@ export default function Footer() {
           display: { xs: 'flex', lg: 'flex', md: 'flex' }
         }}
       />
-      <Typography variant="caption" align="center" sx={{ mt: 4, display: 'block', color: '#b5b5b6',fontSize: '16px', fontWeight: '600' }}>
-        Copyright © 2025 by <Link href="https://www.istemanit.in/" sx={{textDecoration: 'none', cursor: 'pointer'}} >ISTE SC MANIT</Link> . All rights reserved.
+      <Typography variant="caption" align="center" sx={{
+        mt: 4,
+        display: 'block',
+        color: '#b5b5b6',
+        fontSize: '1rem',
+        fontFamily: '"Tektur", sans-serif',
+        fontWeight: 500,
+      }}>
+        Copyright © 2025 by <Link href="https://www.istemanit.in/" sx={{
+          textDecoration: 'none',
+          cursor: 'pointer',
+          fontFamily: '"Tektur", sans-serif',
+          fontWeight: 500,
+        }} >ISTE SC MANIT</Link> . All rights reserved.
       </Typography>
     </Box>
   );
