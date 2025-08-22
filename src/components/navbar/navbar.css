@@ -1,4 +1,3 @@
-
 html.body-no-scroll,
 body.body-no-scroll {
     overflow: hidden;
@@ -31,13 +30,13 @@ html,body{
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 0 30px;
 }
 
 .istelogo {
-    width: 100px;
+    width: 120px; /* Increased from 100px */
 }
 
 /* --- Desktop Navigation --- */
@@ -94,7 +93,7 @@ html,body{
     align-items: flex-start;
     padding: 120px 40px;
     transition: left 0.4s ease-in-out;
-    z-index: 400; /* Ensure menu is on top of the blur overlay */
+    z-index: 400; 
 }
 
 .nav.active {
@@ -126,7 +125,7 @@ html,body{
     margin-bottom: 50px;
 }
 .mobile-logo .istelogo{
-    width: 150px;
+    width: 180px; /* Increased from 150px */
 }
 /* --- New Blur Background Overlay --- */
 .blur-background-overlay {
@@ -135,9 +134,9 @@ html,body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Optional: slight dark tint */
+    background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
-    z-index: 10; /* Sits behind the nav bar but on top of page content */
+    z-index: 399; 
 }
 
 
@@ -149,7 +148,7 @@ html,body{
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 912px) { 
     .desktop-nav {
         display: none;
     }
@@ -158,6 +157,7 @@ html,body{
     }
     .navcontent {
         width: 90%;
+        justify-content: space-between;
     }
 }
 
@@ -165,9 +165,10 @@ html,body{
     .navcontent {
         height: 50px;
         width: 90%;
+        justify-content: space-between;
     }
     .istelogo {
-        width: 90px;
+        width: 110px; /* Increased from 90px */
     }
     .nav {
         padding: 100px 30px;

@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className="navcontent">
           {/* Logo */}
           <div className="desktop-logo">
-            <motion.a href="https://www.istemanit.in/" target="_blank"><motion.img src="/Images/newlogo.png" variants={imgvariants} initial="initial" animate="animate" className='istelogo' alt="logo" /></motion.a>
+            <motion.a href="https://www.istemanit.in/" target="_blank"><motion.img src="/Images/Logo.svg" variants={imgvariants} initial="initial" animate="animate" className='istelogo' alt="logo" /></motion.a>
           </div>
 
           {/* Desktop Menu (hidden on mobile) */}
@@ -68,7 +68,7 @@ const Navbar = () => {
           &times;
         </div>
         <div className="mobile-logo">
-            <img src="/Images/newlogo.png" className='istelogo' alt="logo" />
+            <img src="/Images/Logo.svg" className='istelogo' alt="logo" />
         </div>
         <ul>
           <motion.li ><a href="#hero" onClick={() => setMenuOpen(false)}>HOME</a></motion.li>
