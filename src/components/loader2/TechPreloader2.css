@@ -1,0 +1,305 @@
+/* TechPreloader - polished & responsive
+   - Focus: improved .main-title animation (glow + chroma glitch + glint)
+   - Uses clamp/rem units for responsive sizing
+   - Respects prefers-reduced-motion
+*/
+
+:root{
+  --bg: #0a0a0f;
+  --aqua: #00FFF1;
+  --pink: #FF4F79;
+  --accent: #72FFFF;
+  --muted: rgba(255,255,255,0.08);
+  --glass: rgba(255,255,255,0.04);
+  --glow-aqua: 0 0 22px rgba(0,255,241,0.25);
+  --glow-pink: 0 0 30px rgba(255,79,121,0.18);
+  --mono: 'Courier New', monospace;
+  --fancy: 'Orbitron', 'League Spartan', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Base container */
+.preloader-container {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: var(--mono);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Matrix Rain */
+.matrix-rain {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.matrix-column {
+  position: absolute;
+  font-size: clamp(0.531rem, 1.6vw, 0.781rem); /* responsive */
+  color: var(--aqua);
+  opacity: 0.12;
+  font-family: var(--mono);
+  text-shadow: 0 0 6px rgba(0,255,241,0.45), 0 0 10px rgba(255,79,121,0.18);
+  will-change: transform, opacity;
+}
+
+/* falling animation */
+.matrix-text { animation: matrix-fall 5s linear infinite; }
+@keyframes matrix-fall {
+  0% { transform: translateY(-110vh); }
+  100% { transform: translateY(110vh); }
+}
+
+/* Scan line */
+.scan-line-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+.scan-line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--aqua), var(--pink), transparent);
+  animation: scan 3.2s linear infinite;
+  mix-blend-mode: screen;
+  opacity: 0.65;
+}
+@keyframes scan {
+  0% { transform: translateY(-110vh); }
+  100% { transform: translateY(110vh); }
+}
+
+/* Main content (centered) */
+.main-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 880px;
+  padding: clamp(0.625rem, 2.5vw, 1.406rem);
+  width: 100%;
+  pointer-events: auto;
+}
+
+/* Logo / icons */
+.logo-section {
+  margin-bottom: clamp(0.625rem, 3vw, 1.563rem);
+}
+.icons-container {
+  display: flex;
+  gap: clamp(0.313rem, 1.5vw, 0.750rem);
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.563rem;
+}
+.icon {
+  width: clamp(34px, 4vw, 48px);
+  height: clamp(34px, 4vw, 48px);
+  display: inline-block;
+}
+
+/* icon color tuning */
+.icon-terminal { color: var(--aqua); animation: cyber-pulse 2.6s ease-in-out infinite; }
+.icon-code     { color: var(--aqua); opacity: 0.95; transform-origin: center; }
+.icon-zap      { color: var(--pink); opacity: 0.95; }
+.icon-binary   { color: var(--accent); opacity: 0.95; }
+
+/* subtle pulse for terminal icon */
+@keyframes cyber-pulse {
+  0%,100% { transform: scale(1); opacity: 1; }
+  50%     { transform: scale(1.08); opacity: 0.8; }
+}
+
+/* ========= IMPROVED MAIN TITLE ANIMATION =========
+   - responsive size via clamp()
+   - layered glow text-shadow
+   - jittery "glitch" using small translateX/skew steps
+   - glint sweep using a pseudo-element
+*/
+.main-title {
+  position: relative;
+  display: inline-block;
+  font-family: var(--fancy);
+  font-size: clamp(1.250rem, 7.5vw, 2.750rem); /* responsive */
+  line-height: 0.95;
+  font-weight: 900;
+  margin-bottom: 0.281rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, var(--pink), var(--aqua), var(--pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 
+    0 0 18px rgba(0,255,241,0.22),
+    0 0 36px rgba(255,79,121,0.12);
+  /* combined animations: glutch jitter + periodic color shift + glint */
+  animation: titleGlitch 2.6s steps(2,end) infinite, titleShift 6s ease-in-out infinite;
+  will-change: transform, text-shadow;
+}
+
+/* gentle chromatic shift for the glow */
+@keyframes titleShift {
+  0% {
+    text-shadow: 0 0 18px rgba(0,255,241,0.24), 0 0 36px rgba(255,79,121,0.14);
+    filter: drop-shadow(0 0 6px rgba(0,255,241,0.12));
+  }
+  50% {
+    text-shadow: 0 0 26px rgba(255,79,121,0.22), 0 0 46px rgba(0,255,241,0.12);
+    filter: drop-shadow(0 0 8px rgba(255,79,121,0.12));
+  }
+  100% { 
+    text-shadow: 0 0 18px rgba(0,255,241,0.24), 0 0 36px rgba(255,79,121,0.14);
+  }
+}
+
+/* faster small jumpy glitch — creates a quick horizontal jitter */
+@keyframes titleGlitch {
+  0%   { transform: translateX(0) skewX(0deg); }
+  10%  { transform: translateX(-1px) skewX(-0.4deg); }
+  20%  { transform: translateX(1.5px) skewX(0.6deg); }
+  30%  { transform: translateX(0) skewX(0deg); }
+  40%  { transform: translateX(-0.7px) skewX(-0.3deg); }
+  50%  { transform: translateX(0.9px) skewX(0.4deg); }
+  60%  { transform: translateX(0) skewX(0deg); }
+  100% { transform: translateX(0) skewX(0deg); }
+}
+
+/* additive glint sweep (pseudo-element) */
+.main-title::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -40%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.06) 40%, rgba(255,255,255,0.12) 50%, rgba(255,255,255,0.06) 60%, transparent 100%);
+  transform: skewX(-18deg);
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  opacity: 0.65;
+  animation: titleGlint 4.2s ease-in-out infinite;
+}
+
+/* glint animation moves the sweep across occasionally */
+@keyframes titleGlint {
+  0%   { left: -60%; opacity: 0; }
+  10%  { left: -60%; opacity: 0; }
+  30%  { left: 110%; opacity: 0.35; }
+  60%  { left: 110%; opacity: 0; }
+  100% { left: -60%; opacity: 0; }
+}
+
+/* subtitle and small system text */
+.sub-title {
+  font-family: var(--fancy);
+  font-size: clamp(0.656rem, 3vw, 1.219rem);
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.188rem;
+  text-shadow: 0 0 12px rgba(0,255,241,0.12);
+}
+
+.system-text {
+  font-size: clamp(0.422rem, 1.8vw, 0.594rem);
+  color: var(--accent);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.95;
+  margin-top: 0.156rem;
+}
+
+/* Loading section layout */
+.loading-section { display:flex; flex-direction:column; gap:0.625rem; align-items:stretch; max-width: 640px; margin: 0 auto; }
+
+/* Progress bar - slightly taller for visibility */
+.progress-container { position: relative; width: 100%; }
+.progress-bar { width: 100%; height: 6px; background: var(--muted); border-radius: 6px; overflow:hidden; }
+.progress-fill {
+  height:100%;
+  background: linear-gradient(90deg, var(--aqua), var(--pink));
+  transition: width 0.35s cubic-bezier(.2,.9,.3,1);
+  position: relative;
+}
+.progress-glow {
+  position:absolute; inset:0;
+  background: linear-gradient(90deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
+  mix-blend-mode: screen;
+  animation: pulse 1.6s ease-in-out infinite;
+}
+.progress-text {
+  text-align: right;
+  margin-top: 0.313rem;
+  color: var(--accent);
+  font-weight:700;
+  text-shadow: 0 0 6px rgba(0,255,241,0.12);
+  font-size: clamp(0.469rem, 1.8vw, 0.594rem);
+}
+
+/* Loading text */
+.loading-text {
+  font-size: clamp(0.450rem, 1.7vw, 0.594rem);
+  color: #fff;
+  opacity: 0.95;
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+/* status grid */
+.status-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.375rem;
+  font-size: clamp(0.425rem, 1.6vw, 0.531rem);
+  opacity: 0.85;
+}
+.status-left { text-align: left; }
+.status-right { text-align: right; }
+.status-item { margin-bottom: 0.112rem; }
+.status-green { color: var(--accent); font-weight:600; }
+.status-blue  { color: var(--pink); font-weight:600; }
+.status-glow  { color: #fff; text-shadow: 0 0 8px rgba(0,255,241,0.28); }
+
+/* circuit patterns */
+.circuit-pattern { position: absolute; border: 1px solid; opacity: 0.16; filter: blur(0.2px); }
+.circuit-1 { top: -2.813rem; left: -2.813rem; width: 5.625rem; height: 5.625rem; border-color: var(--aqua); transform: rotate(45deg); }
+.circuit-2 { bottom: -2.813rem; right: -2.813rem; width: 4.500rem; height: 4.500rem; border-color: var(--pink); transform: rotate(12deg); }
+
+/* cyber grid */
+.cyber-grid {
+  position: absolute; inset:0; z-index:0;
+  background-image:
+    linear-gradient(var(--aqua) 1px, transparent 1px),
+    linear-gradient(90deg, var(--aqua) 1px, transparent 1px);
+  background-size: 56px 56px;
+  opacity: 0.035;
+}
+
+/* small utility */
+@keyframes pulse {
+  0%,100% { opacity: 1; }
+  50%     { opacity: 0.45; }
+}
+
+/* responsive tweaks */
+@media (max-width: 768px) {
+  .matrix-column { font-size: clamp(0.438rem, 2.2vw, 0.656rem); opacity: 0.09; }
+  .main-title { font-size: clamp(1.000rem, 9vw, 1.625rem); }
+  .sub-title  { font-size: clamp(0.594rem, 3.5vw, 0.781rem); }
+  .progress-bar { height: 5px; border-radius: 4px; }
+  .icons-container { gap: 0.375rem; }
+}
+
+/* accessibility: reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .scan-line, .matrix-text, .titleGlint, .progress-glow, .main-title::after, .main-title, .matrix-column {
+    animation: none !important;
+    transition: none !important;
+  }
+  .main-title { transform: none !important; }
+}

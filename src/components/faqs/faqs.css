@@ -74,6 +74,7 @@
     border-radius: 5px;
     padding: 8px 12px;
     color: aquamarine;
+    font-size: 16px;
 }
 @media screen  and (max-width:1000px){
     .faq{

@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Terminal, Code, Zap, Binary } from 'lucide-react';
-import './TechPreloader.css';
+import './TechPreloader2.css';
 
 const TechPreloader = ({ onComplete }) => {
   const [progress, setProgress] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [showProgress, setShowProgress] = useState(false);
-
+  const [exit, setExit] = useState(false);
   const loadingTexts = [
     'Initializing Version Beta 8.0...',
     'Loading hackathon modules...',
@@ -19,6 +19,7 @@ const TechPreloader = ({ onComplete }) => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
+      setExit(true);
       setShowProgress(true);
     }, 1000);
 

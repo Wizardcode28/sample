@@ -16,7 +16,7 @@ const Schedule = () => {
                   className="tektur w-auto text-[#ccc] bg-transparent text-left ml-[10vw] max-md:ml-0 p-[20px_60px_20px_0] max-md:p-[20px_0_20px_120px] block relative"
                 >
                   {/* <div className="absolute bg-[#897be2b5] skew-y-[-20deg] w-10 top-0 bottom-0 -right-5 max-md:left-[30px]"></div> */}
-                  <img src="/Images/Rectangle8.png"className="absolute -z-40 top-3 bottom-0 -right-5 h-[178vh] w-[2vw] max-lg:h-[220vh] max-lg:w-[4vw] max-md:h-[260vh] max-md:left-[39px]"alt=""/>
+                  <img src="/Images/Rectangle8.png"className="absolute -z-40 top-3 bottom-0 -right-5 h-[250vh] w-[2vw] max-lg:h-[280vh] max-lg:w-[4vw] max-md:h-[260vh] max-md:left-[39px]"alt=""/>
                   <div className="text-[18px] text-center font-[600] leading-[100px] w-[100px] h-[100px]  translate-y-[-50%] top-[50%] right-[-50px] z-10  absolute max-md:left-0 max-md:right-auto">
                     {/* <div className="absolute bg-white rounded-full shadow-[5px_5px_7px_rgba(0,0,0,0.4)] top-[10px] right-[10px] bottom-[10px] left-[10px] -z-10"></div> */}
                     <img src="/Images/image3.png"className="absolute top-[10px] right-[10px] bottom-[10px] left-[10px] -z-10"alt=""/>

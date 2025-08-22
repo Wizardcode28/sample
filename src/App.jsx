@@ -20,7 +20,7 @@ function App() {
 //   useEffect(()=>{
 //     const timer= setTimeout(()=>{
 //       setLoading(false)
-//     },15000)
+//     },0)
 //   return ()=>clearTimeout(timer)
 // },[])
 
@@ -76,7 +76,9 @@ function App() {
     <div className='maincontainer' ref={containerRef}>
       <div ref={lightRef} className="cursor-light"style={{ display: loading ? "none" : "block" }}/>
     {
-      loading? (<Loader2 onComplete={() => setLoading(false)} />)
+      loading? (
+      <Loader2 onComplete={() => setLoading(false)} />
+    )
       :
       (  
         <>
