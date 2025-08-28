@@ -5,7 +5,6 @@ import {
   Grid,
   Typography,
   Link,
-  Avatar,
   Stack
 } from '@mui/material';
 import {
@@ -27,7 +26,7 @@ export default function Footer() {
         color: 'white',
         py: 2,
         px: 3,
-        fontFamily: 'Roboto, sans-serif',
+        fontFamily: 'Tektur, sans-serif',
         fontWeight: 500,
       }}
     >
@@ -46,7 +45,11 @@ export default function Footer() {
             <Box
               sx={{
                 display: 'flex',
-                flexDirection: { xs: 'column', md: 'row' },
+                // CHANGE 1: Make the layout switch at 912px
+                flexDirection: 'column',
+                '@media (min-width:912px)': {
+                  flexDirection: 'row',
+                },
                 justifyContent: { xs: 'center', md: 'center' },
                 alignItems: 'flex-start',
                 gap: { xs: 4, md: 15 }
@@ -61,11 +64,12 @@ export default function Footer() {
                     fontSize: '2.5rem',
                     color: '#ea580c',
                     fontWeight: 500,
-                    fontFamily: 'Roboto, sans-serif',
+                    fontFamily: 'Tektur, sans-serif',
                     transition: 'transform 0.3s ease',
                     '&:hover': {
                       transform: 'scale(1.1)'
-                    }
+                    },
+                    display: 'block'
                   }}
                 >
                   Contact Us
@@ -91,7 +95,7 @@ export default function Footer() {
                       }}>
                         <Typography variant="body2" sx={{
                           fontSize: '0.9rem',
-                          fontFamily: 'Roboto, sans-serif',
+                          fontFamily: 'Tektur, sans-serif',
                           fontWeight: 500,
                           whiteSpace: 'nowrap',
                         }}>
@@ -100,8 +104,9 @@ export default function Footer() {
                         <Link href="tel:+917909474088" sx={{ textDecoration: 'none', color: 'inherit' }}>
                           <Typography variant="body2" sx={{
                             fontSize: '0.9rem',
-                            fontFamily: 'Roboto, sans-serif',
+                            fontFamily: 'Tektur, sans-serif',
                             fontWeight: 500,
+                            whiteSpace: 'nowrap'
                           }}>
                             +91 7909474088
                           </Typography>
@@ -121,7 +126,7 @@ export default function Footer() {
                       }}>
                         <Typography variant="body2" sx={{
                           fontSize: '0.9rem',
-                          fontFamily: 'Roboto, sans-serif',
+                          fontFamily: 'Tektur, sans-serif',
                           fontWeight: 500,
                           whiteSpace: 'nowrap',
                         }}>
@@ -130,8 +135,9 @@ export default function Footer() {
                         <Link href="tel:+919828534432" sx={{ textDecoration: 'none', color: 'inherit' }}>
                           <Typography variant="body2" sx={{
                             fontSize: '0.9rem',
-                            fontFamily: 'Roboto, sans-serif',
+                            fontFamily: 'Tektur, sans-serif',
                             fontWeight: 500,
+                            whiteSpace: 'nowrap'
                           }}>
                             +91 9828534432
                           </Typography>
@@ -151,7 +157,7 @@ export default function Footer() {
                       <Typography variant="body2" sx={{
                         fontSize: '0.9rem',
                         color: '#b5b5b6',
-                        fontFamily: 'Roboto, sans-serif',
+                        fontFamily: 'Tektur, sans-serif',
                         fontWeight: 500,
                         transition: 'color 0.3s ease',
                         whiteSpace: 'nowrap',
@@ -176,7 +182,7 @@ export default function Footer() {
                       cursor: 'pointer',
                         fontSize: '0.9rem',
                         color: '#b5b5b6',
-                        fontFamily: 'Roboto, sans-serif',
+                        fontFamily: 'Tektur, sans-serif',
                         fontWeight: 500,
                         transition: 'color 0.3s ease',
                         whiteSpace: 'nowrap',
@@ -196,7 +202,11 @@ export default function Footer() {
                   height: '15rem',
                   marginTop: '3.4375rem',
                   backgroundColor: '#7a7a7a',
-                  display: { xs: 'none', lg: 'flex', md: 'flex' }
+                  // CHANGE 2: Make the line appear at 912px
+                  display: 'none',
+                  '@media (min-width:912px)': {
+                    display: 'flex',
+                  }
                 }}
               />
 
@@ -207,13 +217,14 @@ export default function Footer() {
                     mb: 3,
                     color: '#ea580c',
                     fontWeight: 500,
-                    fontFamily: 'Roboto, sans-serif',
+                    fontFamily: 'Tektur, sans-serif',
                     textAlign: 'left',
                     fontSize: '2.5rem',
                     transition: 'transform 0.3s ease',
                     '&:hover': {
                       transform: 'scale(1.1)'
-                    }
+                    },
+                    whiteSpace: 'nowrap'
                   }}
                 >
                   Social Links
@@ -270,7 +281,7 @@ export default function Footer() {
                     <Typography className='social-text' variant="body2" sx={{
                       fontSize: '1.25rem',
                       color: '#b5b5b6',
-                      fontFamily: 'Roboto, sans-serif',
+                      fontFamily: 'Tektur, sans-serif',
                       fontWeight: 500,
                       whiteSpace: 'nowrap',
                     }}>
@@ -316,7 +327,7 @@ export default function Footer() {
                         component="img"
                         className="icon-hover"
                         src="/Images/facebook.svg"
-                        alt="Instagram Logo"
+                        alt="Facebook Logo"
                         sx={{
                           width: '2.0625rem',
                           height: '2.0625rem',
@@ -328,7 +339,7 @@ export default function Footer() {
                     <Typography className='social-text' variant="body2" sx={{
                       fontSize: '1.25rem',
                       color: '#b5b5b6',
-                      fontFamily: 'Roboto, sans-serif',
+                      fontFamily: 'Tektur, sans-serif',
                       fontWeight: 500,
                       whiteSpace: 'nowrap',
                     }}>
@@ -374,7 +385,7 @@ export default function Footer() {
                         component="img"
                         className="icon-hover"
                         src="/Images/linkedin.svg"
-                        alt="Instagram Logo"
+                        alt="LinkedIn Logo"
                         sx={{
                           width: '2.8125rem',
                           height: '2.8125rem',
@@ -387,7 +398,7 @@ export default function Footer() {
                     <Typography className="social-text" variant="body2" sx={{
                       fontSize: '1.25rem',
                       color: '#b5b5b6',
-                      fontFamily: 'Roboto, sans-serif',
+                      fontFamily: 'Tektur, sans-serif',
                       fontWeight: 500,
                       whiteSpace: 'nowrap',
                     }}>
@@ -428,7 +439,7 @@ export default function Footer() {
             color: '#b5b5b6',
             '&:hover': {color: '#ea580c'},
             fontSize: { xs: '1rem', sm: '1.125rem', md: '1.25rem' },
-            fontFamily: 'Roboto, sans-serif',
+            fontFamily: 'Tektur, sans-serif',
             fontWeight: 500,
             whiteSpace: 'nowrap'
           }}
@@ -443,7 +454,7 @@ export default function Footer() {
             color: '#b5b5b6',
             '&:hover': {color: '#ea580c'},
             fontSize: { xs: '1rem', sm: '1.125rem', md: '1.25rem' },
-            fontFamily: 'Roboto, sans-serif',
+            fontFamily: 'Tektur, sans-serif',
             fontWeight: 500,
             whiteSpace: 'nowrap'
           }}
@@ -468,14 +479,15 @@ export default function Footer() {
         display: 'block',
         color: '#b5b5b6',
         fontSize: '1rem',
-        fontFamily: 'Roboto, sans-serif',
+        fontFamily: 'Tektur, sans-serif',
         fontWeight: 500,
       }}>
         Copyright © 2025 by <Link href="https://www.istemanit.in/" sx={{
           textDecoration: 'none',
           cursor: 'pointer',
-          fontFamily: 'Roboto, sans-serif',
+          fontFamily: 'Tektur, sans-serif',
           fontWeight: 500,
+          target:"_blank"
         }} >ISTE SC MANIT</Link> . All rights reserved.
       </Typography>
     </Box>
