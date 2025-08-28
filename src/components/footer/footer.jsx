@@ -45,7 +45,6 @@ export default function Footer() {
             <Box
               sx={{
                 display: 'flex',
-                // CHANGE 1: Make the layout switch at 912px
                 flexDirection: 'column',
                 '@media (min-width:912px)': {
                   flexDirection: 'row',
@@ -86,7 +85,7 @@ export default function Footer() {
                       <Box sx={{
                         display: { xs: 'block', sm: 'flex' },
                         alignItems: 'center',
-                        gap: { sm: 8.8 },
+                        gap: { sm: 3 },
                         color: '#b5b5b6',
                         transition: 'color 0.3s ease',
                         '&:hover': {
@@ -98,17 +97,18 @@ export default function Footer() {
                           fontFamily: 'Tektur, sans-serif',
                           fontWeight: 500,
                           whiteSpace: 'nowrap',
+                          minWidth: { sm: '8.5rem' }
                         }}>
-                          Abhinav Rai
+                          Sanjana Malani
                         </Typography>
-                        <Link href="tel:+917909474088" sx={{ textDecoration: 'none', color: 'inherit' }}>
+                        <Link href="tel:+917691929205" sx={{ textDecoration: 'none', color: 'inherit' }}>
                           <Typography variant="body2" sx={{
                             fontSize: '0.9rem',
                             fontFamily: 'Tektur, sans-serif',
                             fontWeight: 500,
                             whiteSpace: 'nowrap'
                           }}>
-                            +91 7909474088
+                            +91 7691929205
                           </Typography>
                         </Link>
                       </Box>
@@ -129,17 +129,18 @@ export default function Footer() {
                           fontFamily: 'Tektur, sans-serif',
                           fontWeight: 500,
                           whiteSpace: 'nowrap',
+                          minWidth: { sm: '8.5rem' }
                         }}>
-                          Vanshika Agarwal
+                          Tanishq Dinkar
                         </Typography>
-                        <Link href="tel:+919828534432" sx={{ textDecoration: 'none', color: 'inherit' }}>
+                        <Link href="tel:+919109896779" sx={{ textDecoration: 'none', color: 'inherit' }}>
                           <Typography variant="body2" sx={{
                             fontSize: '0.9rem',
                             fontFamily: 'Tektur, sans-serif',
                             fontWeight: 500,
                             whiteSpace: 'nowrap'
                           }}>
-                            +91 9828534432
+                            +91 9109896779
                           </Typography>
                         </Link>
                       </Box>
@@ -153,7 +154,12 @@ export default function Footer() {
                     sx={{ justifyContent: 'flex-start' }}
                   >
                     <LocationOn sx={{ color: '#ea580c', fontSize: '2.1875rem', mt: 0.5 }} />
-                    <Link href="https://maps.app.goo.gl/ZERHwrJJcutMMMig8" sx={{cursor:'pointer', textDecoration:'none'}}  >
+                    <Link
+                      href="https://maps.app.goo.gl/ZERHwrJJcutMMMig8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      sx={{cursor:'pointer', textDecoration:'none'}}
+                    >
                       <Typography variant="body2" sx={{
                         fontSize: '0.9rem',
                         color: '#b5b5b6',
@@ -178,20 +184,22 @@ export default function Footer() {
                     sx={{ justifyContent: 'flex-start' }}
                   >
                     <Email sx={{ color: '#ea580c', fontSize: '2.1875rem' }} />
-                    <Typography variant="body2" sx={{
-                      cursor: 'pointer',
-                        fontSize: '0.9rem',
-                        color: '#b5b5b6',
-                        fontFamily: 'Tektur, sans-serif',
-                        fontWeight: 500,
-                        transition: 'color 0.3s ease',
-                        whiteSpace: 'nowrap',
-                        '&:hover': {
-                          color: '#ea580c',
-                        }
-                      }}>
-                      istescmanit@gmail.com
-                    </Typography>
+                    <Link href="mailto:istescmanit@gmail.com" sx={{cursor:'pointer', textDecoration:'none'}}>
+                      <Typography variant="body2" sx={{
+                        cursor: 'pointer',
+                          fontSize: '0.9rem',
+                          color: '#b5b5b6',
+                          fontFamily: 'Tektur, sans-serif',
+                          fontWeight: 500,
+                          transition: 'color 0.3s ease',
+                          whiteSpace: 'nowrap',
+                          '&:hover': {
+                            color: '#ea580c',
+                          }
+                        }}>
+                        istescmanit@gmail.com
+                      </Typography>
+                    </Link>
                   </Stack>
                 </Stack>
               </Box>
@@ -202,7 +210,6 @@ export default function Footer() {
                   height: '15rem',
                   marginTop: '3.4375rem',
                   backgroundColor: '#7a7a7a',
-                  // CHANGE 2: Make the line appear at 912px
                   display: 'none',
                   '@media (min-width:912px)': {
                     display: 'flex',
@@ -234,6 +241,8 @@ export default function Footer() {
                     href="https://www.instagram.com/istemanit/"
                     underline="none"
                     color="inherit"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     sx={{
                       display: 'flex',
                       alignItems: 'center',
@@ -292,6 +301,8 @@ export default function Footer() {
                     href="https://www.facebook.com/ISTESCMANIT"
                     underline="none"
                     color="inherit"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     sx={{
                       display: 'flex',
                       alignItems: 'center',
@@ -350,6 +361,8 @@ export default function Footer() {
                     href="https://www.linkedin.com/company/iste-sc-manit/"
                     underline="none"
                     color="inherit"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     sx={{
                       display: 'flex',
                       alignItems: 'center',
@@ -433,6 +446,9 @@ export default function Footer() {
         textAlign: 'center'
       }}>
         <Link
+          href="https://devfolio.co/code-of-conduct"
+          target="_blank"
+          rel="noopener noreferrer"
           sx={{
             textDecoration: 'none',
             cursor: 'pointer',
@@ -443,11 +459,13 @@ export default function Footer() {
             fontWeight: 500,
             whiteSpace: 'nowrap'
           }}
-          href="https://devfolio.co/code-of-conduct"
         >
           Code Of Conduct Devfolio
         </Link>
         <Link
+          href="https://version-beta-main.vercel.app/Images/VBrulebook-2024.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           sx={{
             textDecoration: 'none',
             cursor: 'pointer',
@@ -458,7 +476,6 @@ export default function Footer() {
             fontWeight: 500,
             whiteSpace: 'nowrap'
           }}
-          href="https://version-beta-main.vercel.app/Images/VBrulebook-2024.pdf"
         >
           Rulebook
         </Link>
@@ -482,12 +499,18 @@ export default function Footer() {
         fontFamily: 'Tektur, sans-serif',
         fontWeight: 500,
       }}>
-        Copyright © 2025 by <Link href="https://www.istemanit.in/" sx={{
-          textDecoration: 'none',
-          cursor: 'pointer',
-          fontFamily: 'Tektur, sans-serif',
-          fontWeight: 500,
-        }} >ISTE SC MANIT</Link> . All rights reserved.
+        Copyright © 2025 by <Link
+          href="https://www.istemanit.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            textDecoration: 'none',
+            cursor: 'pointer',
+            fontFamily: 'Tektur, sans-serif',
+            fontWeight: 500,
+            color: 'inherit'
+          }}
+        >ISTE SC MANIT</Link> . All rights reserved.
       </Typography>
     </Box>
   );
