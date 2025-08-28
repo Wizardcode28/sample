@@ -37,7 +37,7 @@
     color: aquamarine;
     font-size:2.500rem;
     font-weight: bold;
-    font-family: "StateWide",sans-serif;
+    /* font-family: "StateWide",sans-serif; */
     text-shadow: rgb(230, 230, 230) 0 0 0.313rem;
     font-family: "Tektur", sans-serif;
 }

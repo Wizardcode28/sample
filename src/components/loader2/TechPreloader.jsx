@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+// src/components/loader2/TechPreloader.jsx
+import { useState, useEffect, useRef } from 'react';
 import { Terminal, Code, Zap, Binary } from 'lucide-react';
 import './TechPreloader2.css';
 
@@ -6,7 +7,8 @@ const TechPreloader = ({ onComplete }) => {
   const [progress, setProgress] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [showProgress, setShowProgress] = useState(false);
-  const [exit, setExit] = useState(false);
+  const mountedRef = useRef(true);
+
   const loadingTexts = [
     'Initializing Version Beta 8.0...',
     'Loading hackathon modules...',
@@ -14,54 +16,57 @@ const TechPreloader = ({ onComplete }) => {
     'Establishing secure connections...',
     'Finalizing system protocols...'
   ];
-
-  const matrixChars = ['0', '1', 'ａ', 'ｂ', 'ｃ', 'ｄ', 'ｅ', 'ｆ', 'ｇ', 'ｈ', 'ｉ', 'ｊ', 'ｋ', 'ｌ', 'ｍ', 'ｎ', 'ｏ', 'ｐ', 'ｑ', 'ｒ', 'ｓ', 'ｔ', 'ｕ', 'ｖ', 'ｗ', 'ｘ', 'ｙ', 'ｚ'];
+  const matrixChars = ['0','1','ａ','ｂ','ｃ','ｄ','ｅ','ｆ','ｇ','ｈ','ｉ','ｊ','ｋ','ｌ','ｍ','ｎ','ｏ','ｐ','ｑ','ｒ','ｓ','ｔ','ｕ','ｖ','ｗ','ｘ','ｙ','ｚ'];
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setExit(true);
-      setShowProgress(true);
-    }, 1000);
+    mountedRef.current = true;
 
+    // Start by showing the progress block after a short intro delay
+    const showTimer = setTimeout(() => setShowProgress(true), 600);
+
+    // progress increment interval
     const progressTimer = setInterval(() => {
       setProgress(prev => {
-        if (prev >= 100) {
-          clearInterval(progressTimer);
-          setTimeout(onComplete, 500);
-          return 100;
-        }
-        return prev + Math.random() * 15;
+        const next = Math.min(100, prev + Math.max(2, Math.random() * 12));
+        return next;
       });
-    }, 200);
+    }, 250);
 
+    // text rotation
     const textTimer = setInterval(() => {
       setCurrentText(loadingTexts[Math.floor(Math.random() * loadingTexts.length)]);
-    }, 800);
+    }, 700);
 
     return () => {
-      clearTimeout(timer);
+      mountedRef.current = false;
+      clearTimeout(showTimer);
       clearInterval(progressTimer);
       clearInterval(textTimer);
     };
-  }, [onComplete]);
+  }, []);
+
+  // When progress reaches 100, wait a small moment for final glow/fade and call onComplete
+  useEffect(() => {
+    if (progress >= 100) {
+      // small delay so user sees final state
+      const fin = setTimeout(() => {
+        if (typeof onComplete === 'function') onComplete();
+      }, 450);
+      return () => clearTimeout(fin);
+    }
+  }, [progress, onComplete]);
 
   const MatrixRain = () => (
-    <div className="matrix-rain">
-      {Array.from({ length: 20 }).map((_, i) => (
-        <div
-          key={i}
-          className="matrix-column"
-          style={{
-            left: `${Math.random() * 100}%`,
-            animationDelay: `${Math.random() * 3}s`,
-            animationDuration: `${3 + Math.random() * 2}s`
-          }}
-        >
+    <div className="matrix-rain" aria-hidden>
+      {Array.from({ length: 18 }).map((_, i) => (
+        <div key={i} className="matrix-column" style={{
+          left: `${Math.random() * 100}%`,
+          animationDelay: `${Math.random() * 2}s`,
+          animationDuration: `${3 + Math.random() * 2}s`
+        }}>
           <div className="matrix-text">
             {Array.from({ length: 10 }).map((_, j) => (
-              <div key={j}>
-                {matrixChars[Math.floor(Math.random() * matrixChars.length)]}
-              </div>
+              <div key={j}>{matrixChars[Math.floor(Math.random()*matrixChars.length)]}</div>
             ))}
           </div>
         </div>
@@ -70,19 +75,17 @@ const TechPreloader = ({ onComplete }) => {
   );
 
   const ScanLine = () => (
-    <div className="scan-line-container">
+    <div className="scan-line-container" aria-hidden>
       <div className="scan-line" />
     </div>
   );
 
   return (
-    <div className="preloader-container">
+    <div className="preloader-container" role="status" aria-live="polite">
       <MatrixRain />
       <ScanLine />
-      
-      {/* Main content */}
+
       <div className="main-content">
-        {/* Logo/Title */}
         <div className="logo-section">
           <div className="icons-container">
             <Terminal className="icon icon-terminal" />
@@ -90,44 +93,26 @@ const TechPreloader = ({ onComplete }) => {
             <Zap className="icon icon-zap" />
             <Binary className="icon icon-binary" />
           </div>
-          
-          <h1 className="main-title">
-            VERSION
-          </h1>
-          <h2 className="sub-title">
-            BETA 8.0
-          </h2>
-          <div className="system-text">
-            HACKATHON SYSTEM INTERFACE
-          </div>
+          <h1 className="main-title">VERSION</h1>
+          <h2 className="sub-title">BETA 8.0</h2>
+          <div className="system-text">HACKATHON SYSTEM INTERFACE</div>
         </div>
 
-        {/* Loading animation */}
         {showProgress && (
           <div className="loading-section">
-            {/* Progress bar */}
             <div className="progress-container">
-              <div className="progress-bar">
-                <div 
-                  className="progress-fill"
-                  style={{ width: `${Math.min(progress, 100)}%` }}
-                >
-                  <div className="progress-glow"></div>
+              <div className="progress-bar" aria-hidden>
+                <div className="progress-fill" style={{ width: `${progress}%` }}>
+                  <div className="progress-glow" />
                 </div>
               </div>
-              <div className="progress-text">
-                {Math.floor(Math.min(progress, 100))}%
-              </div>
+              <div className="progress-text">{Math.floor(progress)}%</div>
             </div>
 
-            {/* Loading text */}
             <div className="loading-text-container">
-              <p className="loading-text">
-                {currentText}
-              </p>
+              <p className="loading-text">{currentText}</p>
             </div>
 
-            {/* System status */}
             <div className="status-grid">
               <div className="status-left">
                 <div className="status-item status-green">○ Neural Core: ONLINE</div>
@@ -140,14 +125,9 @@ const TechPreloader = ({ onComplete }) => {
             </div>
           </div>
         )}
-
-        {/* Circuit pattern overlay */}
-        <div className="circuit-pattern circuit-1"></div>
-        <div className="circuit-pattern circuit-2"></div>
       </div>
 
-      {/* Cyber grid background */}
-      <div className="cyber-grid"></div>
+      <div className="cyber-grid" />
     </div>
   );
 };
