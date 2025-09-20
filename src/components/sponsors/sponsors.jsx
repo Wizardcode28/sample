@@ -34,7 +34,7 @@ const Sponsors = () => {
           { href: "", src: "Images/Stubborn Factory.png" },
           { href: "https://devfolio.co/", src: "Images/devfolio.png", alt:"DEVFOLIO LOGO" },
           { href: "https://ethindia.co/", src: "Images/ethindia-light.svg",alt:"ETHINDIA LOGO" },
-          {href:"https://foldapp.com/",src:"Images/Logo + LogoMark  - Filled On Dark 1.png",alt:"FOLD LOGO"},
+          { href:"https://foldapp.com/",  src:"Images/foldlogo.png",alt:"FOLD LOGO"},
           { href: "https://polygon.technology/", src: "Images/polygon.png" },
           { href: "https://stockedge.com/", src: "Images/stockedge.png" },
           { href: "https://aptosfoundation.org/", src: "Images/Aptos.png" },
