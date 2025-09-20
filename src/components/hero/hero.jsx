@@ -116,14 +116,14 @@ const Hero = () => {
       </div>
       
         {/* <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }} animate={{x:[20,0],opacity:[0,1]}} transition={{duration:1}} className='btn'>Apply with Devfolio</motion.button> */}
-        <a
+        <motion.a
           href="https://version-beta-5-15a3.devfolio.co/"
           target = "_blank"
           className="w-56 h-12 bg-[#3770ff] text-white rounded-md flex items-center justify-center btn"
         >
           <img src="/Images/devf.png" alt="" className="w-12 h-12" />
           Apply with Devfolio
-        </a>
+        </motion.a>
 
         <div className="lowercontent">
           <div className="countdown">
