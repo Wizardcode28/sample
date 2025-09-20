@@ -119,7 +119,7 @@ const Hero = () => {
         <motion.a
           href="https://version-beta-5-15a3.devfolio.co/"
           target = "_blank"
-          className="w-56 h-12 bg-[#3770ff] text-white rounded-md flex items-center justify-center btn"
+          className="w-56 h-12 bg-[#3770ff] text-white rounded flex items-center justify-center btn"
         >
           <img src="/Images/devf.png" alt="" className="w-12 h-12" />
           Apply with Devfolio
