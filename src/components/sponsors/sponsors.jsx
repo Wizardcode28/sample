@@ -32,8 +32,8 @@ const Sponsors = () => {
           { href: "https://codingthinker.com/", src: "Images/Coding Thinker.png" },
           { href: "https://learningwhiletravelling.com/", src: "Images/LWT_logo.webp" },
           { href: "", src: "Images/Stubborn Factory.png" },
-          { href: "https://devfolio.co/", src: "Images/devfolio.png" },
-          { href: "https://ethindia.co/", src: "Images/ethindia.svg" },
+          { href: "https://devfolio.co/", src: "Images/devfolio.png", alt:"DEVFOLIO LOGO" },
+          { href: "https://ethindia.co/", src: "Images/ethindia-light.svg",alt:"ETHINDIA LOGO" },
           { href: "https://polygon.technology/", src: "Images/polygon.png" },
           { href: "https://stockedge.com/", src: "Images/stockedge.png" },
           { href: "https://aptosfoundation.org/", src: "Images/Aptos.png" },
@@ -58,7 +58,7 @@ const Sponsors = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: i * 0.05, ease: 'easeOut' }}
           >
-            <img src={sponsor.src} alt="" className="img" loading="lazy" />
+            <img src={sponsor.src} alt={sponsor.alt} className="img" loading="lazy" />
           </motion.a>
         ))}
       </div>
