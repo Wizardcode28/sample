@@ -2,7 +2,7 @@ import React from 'react'
 import "./schedule.css"
 const Schedule = () => {
   return (
-      <>
+    <>
       <div className="flex justify-center mt-12 mb-12" id="schedule">
         <div className='abouttitle text-6xl font-extrabold mb-5'>Schedule</div>
       </div>
@@ -16,15 +16,15 @@ const Schedule = () => {
                   className="tektur w-auto text-[#ccc] bg-transparent text-left ml-[10vw] max-md:ml-0 p-[20px_60px_20px_0] max-md:p-[20px_0_20px_120px] block relative"
                 >
                   {/* <div className="absolute bg-[#897be2b5] skew-y-[-20deg] w-10 top-0 bottom-0 -right-5 max-md:left-[30px]"></div> */}
-                  <img src="/Images/Rectangle8.png"className="absolute -z-40 top-3 bottom-0 -right-5 h-[250vh] w-[2vw] max-lg:h-[280vh] max-lg:w-[4vw] max-md:h-[260vh] max-md:left-[39px]"alt=""/>
+                  <img src="/Images/Rectangle8.png" className="absolute -z-40 top-3 bottom-0 -right-5 h-[250vh] w-[2vw] max-lg:h-[280vh] max-lg:w-[4vw] max-md:h-[260vh] max-md:left-[39px]" alt="" />
                   <div className="text-[18px] text-center font-[600] leading-[100px] w-[100px] h-[100px]  translate-y-[-50%] top-[50%] right-[-50px] z-10  absolute max-md:left-0 max-md:right-auto">
                     {/* <div className="absolute bg-white rounded-full shadow-[5px_5px_7px_rgba(0,0,0,0.4)] top-[10px] right-[10px] bottom-[10px] left-[10px] -z-10"></div> */}
-                    <img src="/Images/image3.png"className="absolute top-[10px] right-[10px] bottom-[10px] left-[10px] -z-10"alt=""/>
-                    <div className='mt-3 ml-2'>18th Oct</div>
+                    <img src="/Images/image3.png" className="absolute top-[10px] right-[10px] bottom-[10px] left-[10px] -z-10" alt="" />
+                    <div className='mt-3 ml-2'>29th Sep</div>
                   </div>
 
                   <div data-aos="fade-left" className="flex">
-                    <img src="Images/50.png"width={"50px"} className='mr-3 mb-4' alt=""/>
+                    <img src="Images/50.png" width={"50px"} className='mr-3 mb-4' alt="" />
                     <h3 className="sch_events text-4xl font-[500] text-[#F68A8A] mb-4  max-md:scale-90 max-md:mb-0">
                       Registration
                     </h3>
@@ -48,11 +48,11 @@ const Schedule = () => {
                   {/* <img src="Images/Rectangle 8.png"className="absolute top-28 bottom-0 -left-1 max-md:left-[39px]"alt=""/> */}
                   <div className="text-[18px] text-center font-[600] leading-[100px] w-[100px] h-[100px]  translate-y-[-50%] top-[50%] left-[-50px] z-10  absolute max-md:left-0 max-md:right-auto">
                     {/* <div className="absolute bg-white rounded-full shadow-[5px_5px_7px_rgba(0,0,0,0.4)] top-[10px] right-[10px] bottom-[10px] left-[10px] -z-10"></div> */}
-                    <img src="/Images/image3.png"className="absolute top-[10px] right-[10px] bottom-[10px] left-[10px] -z-10"alt=""/>
-                    <div className='mt-3 ml-2' >Till 1 Nov</div>
+                    <img src="/Images/image3.png" className="absolute top-[10px] right-[10px] bottom-[10px] left-[10px] -z-10" alt="" />
+                    <div className='mt-3 ml-2' >Till 18 Oct</div>
                   </div>
                   <div data-aos="fade-right" className="flex">
-                    <img src="Images/50.png"width={"50px"} className='mr-3 mb-4' alt=""/>
+                    <img src="Images/50.png" width={"50px"} className='mr-3 mb-4' alt="" />
                     <h3 className="sch_events text-4xl font-[500] text-[#F68A8A] mb-4  max-md:scale-90 max-md:mb-0">
                       Ideation
                     </h3>
@@ -74,11 +74,11 @@ const Schedule = () => {
                   {/* <img src="Images/Rectangle 8.png"className="absolute top-28 bottom-0 -right-5 max-md:left-[39px]"alt=""/> */}
                   <div className="text-[18px] text-center font-[600] leading-[100px] w-[100px] h-[100px]  translate-y-[-50%] top-[50%] right-[-50px] z-10  absolute max-md:left-0 max-md:right-auto">
                     {/* <div className="absolute bg-white rounded-full shadow-[5px_5px_7px_rgba(0,0,0,0.4)] top-[10px] right-[10px] bottom-[10px] left-[10px] -z-10"></div> */}
-                    <img src="/Images/image3.png"className="absolute top-[10px] right-[10px] bottom-[10px] left-[10px] -z-10"alt=""/>
-                    <div className='mt-3 ml-2' >2nd Nov</div>
+                    <img src="/Images/image3.png" className="absolute top-[10px] right-[10px] bottom-[10px] left-[10px] -z-10" alt="" />
+                    <div className='mt-3 ml-2' >20th Oct</div>
                   </div>
                   <div data-aos="fade-left" className="flex">
-                    <img src="Images/50.png"width={"50px"} className='mr-3 mb-4' alt=""/>
+                    <img src="Images/50.png" width={"50px"} className='mr-3 mb-4' alt="" />
                     <h3 className="sch_events text-4xl font-[500] text-[#F68A8A] mb-4  max-md:scale-90 max-md:mb-0">
                       Announcement
                     </h3>
@@ -99,11 +99,11 @@ const Schedule = () => {
                   {/* <img src="Images/Rectangle 8.png"className="absolute top-28 bottom-0 -left-1 max-md:left-[39px]"alt=""/> */}
                   <div className="text-[18px] text-center font-[600] leading-[100px] w-[100px] h-[100px]  translate-y-[-50%] top-[50%] left-[-50px] z-10  absolute max-md:left-0 max-md:right-auto">
                     {/* <div className="absolute bg-white rounded-full shadow-[5px_5px_7px_rgba(0,0,0,0.4)] top-[10px] right-[10px] bottom-[10px] left-[10px] -z-10"></div> */}
-                    <img src="/Images/image3.png"className="absolute top-[10px] right-[10px] bottom-[10px] left-[10px] -z-10"alt=""/>
-                    <div className='mt-3 ml-2' >2-3 Nov</div>
+                    <img src="/Images/image3.png" className="absolute top-[10px] right-[10px] bottom-[10px] left-[10px] -z-10" alt="" />
+                    <div className='mt-3 ml-2' >21st Oct</div>
                   </div>
                   <div data-aos="fade-right" className="flex">
-                    <img src="Images/50.png"width={"50px"} className='mr-3 mb-4' alt=""/>
+                    <img src="Images/50.png" width={"50px"} className='mr-3 mb-4' alt="" />
                     <h3 className=" sch_events text-4xl font-[500] text-[#F68A8A] mb-4  max-md:scale-90 max-md:mb-0">
                       Team
                     </h3>
@@ -125,11 +125,12 @@ const Schedule = () => {
                   {/* <img src="Images/Rectangle 8.png"className="absolute top-20 bottom-0 -right-5 max-md:left-[30px]"alt=""/> */}
                   <div className="text-[18px] text-center font-[600] leading-[100px] w-[100px] h-[100px]  translate-y-[-50%] top-[50%] right-[-50px] z-10  absolute max-md:left-0 max-md:right-auto">
                     {/* <div className="absolute bg-white rounded-full shadow-[5px_5px_7px_rgba(0,0,0,0.4)] top-[10px] right-[10px] bottom-[10px] left-[10px] -z-10"></div> */}
-                    <img src="/Images/image3.png"className="absolute top-[10px] right-[10px] bottom-[10px] left-[10px] -z-10"alt=""/>
-                    <div className='mt-3 ml-2' >8-10 Nov</div>
+                    <img src="/Images/image3.png" className="absolute top-[10px] right-[10px] bottom-[10px] left-[10px] -z-10" alt="" />
+                    <div className='mt-10 ml-2 text-sm font-semibold'>31st Oct</div>
+                    <div className='ml-2 text-sm font-semibold'>- 2nd Nov</div>
                   </div>
                   <div data-aos="fade-left" className="flex">
-                    <img src="Images/50.png"width={"50px"} className='mr-3 mb-4' alt=""/>
+                    <img src="Images/50.png" width={"50px"} className='mr-3 mb-4' alt="" />
                     <h3 className="sch_events text-4xl font-[500] text-[#F68A8A] mb-4  max-md:scale-90 max-md:mb-0">
                       Hackathon
                     </h3>
