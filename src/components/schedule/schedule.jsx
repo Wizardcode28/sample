@@ -32,8 +32,8 @@ const Schedule = () => {
 
                   <p data-aos="fade-left" className=" sch_para text-[18px]  text-left leading-normal font-normal font-[roboto] tracking-wide max-md:scale-90 ">
                     Version Beta is opening its doors for applications
-                    starting from August 20th until October 5th.To apply, all
-                    you need to do is to click on the “Register Here” Button
+                    starting from September 29th until October 18th.To apply, all
+                    you need to do is to click on the “Apply with devfolio” Button
                     above and fill the registration form. After the
                     registration process is compeleted, A rundown of
                     shortlisted candidates for the hack will be declared.
