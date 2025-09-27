@@ -46,7 +46,7 @@ const leftvariants = {
 }
 
 const Hero = () => {
-  const targetDate = new Date("2025-10-18T00:00:00")
+  const targetDate = new Date("2025-10-31T00:00:00")
   const getTimeLeft = () => {
     const now = new Date();
     const diff = targetDate - now;
