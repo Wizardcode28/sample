@@ -310,7 +310,7 @@
         background-image: url("/Images/new_herovertical.png");
         /* background-image: url("/Images/mobile_bg.jpg"); */
         min-height: 100vh;
-        z-index: -1;
+        /* z-index: -1; */
         background-attachment: scroll;
         background-size: cover;
         background-position: center;
