@@ -203,7 +203,19 @@
   text-shadow: 0 0 10px rgba(0, 255, 241, 0.7);
   font-weight: 500;
 }
+.sbi{
+    width: 100%;
+}
+.sbi-text span {
+  display: inline-flex;
+  align-items: center; /* vertically align text + image */
+  gap: 4px;           /* small space between SBI text and logo */
+}
 
+.sbi-text img.sbi {
+  height: 1em;  /* or adjust size */
+  vertical-align: middle;
+}
 .version {
     width: 90%;
     animation: opac 3s infinite ease-in-out;
