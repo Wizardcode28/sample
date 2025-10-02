@@ -50,15 +50,15 @@ const Prizes = () => {
          <div className="prizes">
           <div className="second prize">
               <img src="/Images/second.png" data-aos="fade-up" data-aos-delay="200" alt="" />
-              <div className='pricetag'>₹ 10000</div>
+              <div className='pricetag'>₹ 15000</div>
           </div>
           <div className="one prize">
               <img src="/Images/one.png" data-aos="fade-up" data-aos-delay="400" alt="" />
-              <div className='pricetag'>₹ 15000</div>
+              <div className='pricetag'>₹ 20000</div>
           </div>
           <div className="third prize">
               <img src="/Images/third.png" data-aos="fade-up" data-aos-delay="600" alt="" />
-              <div className='pricetag'>₹ 5000</div>
+              <div className='pricetag'>₹ 10000</div>
           </div>
          </div>
       </div>
