@@ -183,6 +183,27 @@
         0 0 0.938rem rgba(223, 102, 102, 0.6);
 }
 
+.sbi-text {
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #00BFFF, #72FFFF, #00FFF1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 
+      0 0 2px rgba(0, 191, 255, 0.8);
+      /* 0 0 15px rgba(0, 255, 241, 0.9); */
+      /* 0 0 25px rgba(114, 255, 255, 0.9); */
+}
+
+.sbi-text span {
+  color: #fff; /* For "in association with" */
+  -webkit-text-fill-color: #fff;
+  text-shadow: 0 0 10px rgba(0, 255, 241, 0.7);
+  font-weight: 500;
+}
+
 .version {
     width: 90%;
     animation: opac 3s infinite ease-in-out;

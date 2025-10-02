@@ -95,6 +95,7 @@ const Hero = () => {
       <div className="content">
         <motion.div className='left' variants={leftvariants} initial="initial" animate="animate">
           {/* <motion.img src="/Images/version.png" className="version" whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }} animate={{x:[20,0],opacity:[0.5,1]}} alt="" /> */}
+          <div className='sbi-text'>In association with <span>SBI</span></div>
           <motion.img src="/Images/version.png" className="version" whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }} alt="" />
           <div className="timeline">
             <div className="date">
