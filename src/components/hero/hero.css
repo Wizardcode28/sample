@@ -184,37 +184,36 @@
 }
 
 .sbi-text {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 2vw, 2.5rem); /* responsive font size */
   font-weight: 800;
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 2px;
   background: linear-gradient(90deg, #00BFFF, #72FFFF, #00FFF1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 
-      0 0 2px rgba(0, 191, 255, 0.8);
-      /* 0 0 15px rgba(0, 255, 241, 0.9); */
-      /* 0 0 25px rgba(114, 255, 255, 0.9); */
+  text-shadow: 0 0 2px rgba(0, 191, 255, 0.8);
+  
+  display: flex;              /* flex works now */
+  align-items: center;        /* vertical alignment */
+  gap: 0.7rem;
+  flex-wrap: wrap;            /* allow wrapping on smaller screens */
 }
 
 .sbi-text span {
-  color: #fff; /* For "in association with" */
+  color: #fff;
   -webkit-text-fill-color: #fff;
   text-shadow: 0 0 10px rgba(0, 255, 241, 0.7);
   font-weight: 500;
-}
-.sbi{
-    width: 100%;
-}
-.sbi-text span {
+
   display: inline-flex;
-  align-items: center; /* vertically align text + image */
-  gap: 4px;           /* small space between SBI text and logo */
+  align-items: center;
+  gap: 4px;
 }
 
 .sbi-text img.sbi {
-  height: 1em;  /* or adjust size */
-  vertical-align: middle;
+  width: auto;
+  max-width: 4rem; /* shrink logo proportionally */
+  height: auto;
 }
 .version {
     width: 90%;

@@ -96,7 +96,7 @@ const Hero = () => {
         <motion.div className='left' variants={leftvariants} initial="initial" animate="animate">
           {/* <motion.img src="/Images/version.png" className="version" whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }} animate={{x:[20,0],opacity:[0.5,1]}} alt="" /> */}
           <div className="sbi-text">
-          In association with <span><img src="Images/sbi2.png" className="sbi" alt="" /></span>
+          In association with <span><img src="Images/sbiimg.png" className="sbi" alt="" /></span>
         </div>
           <motion.img src="/Images/version.png" className="version" whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }} alt="" />
           <div className="timeline">

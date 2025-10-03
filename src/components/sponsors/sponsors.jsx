@@ -26,7 +26,7 @@ const Sponsors = () => {
           { href: "https://www.imsindia.com/", src: "Images/IMS.png" },
           { href: "https://devfolio.co/", src: "Images/devfolio.png", alt:"DEVFOLIO LOGO" },
           { href: "https://ethindia.co/", src: "Images/ethindia-light.svg",alt:"ETHINDIA LOGO" },
-          { href:"https://unstop.com/", src:"Images/unstop2.png"},
+          { href:"https://unstop.com/", src:"https://d8it4huxumps7.cloudfront.net/uploads/images/unstop/svg/unstop-logo.svg"},
           { href:"https://kgen.io/", src:"Images/kgen2.png"},
           { href:"https://foldapp.com/",  src:"Images/foldlogo.png",alt:"FOLD LOGO"},
           // { href: "https://amul.com/index.php", src: "Images/Amul.png" },
